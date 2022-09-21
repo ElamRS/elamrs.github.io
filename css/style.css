@@ -1,0 +1,324 @@
+/* CSS Geral do website */
+
+/*Mudar a cor de fundo do site para preto*/
+body {
+    background-color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+hr {
+    color: gold;
+    height: 2px;
+    background-color: gold;
+}
+
+/* propriedades gerais de links no website */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Adicionar linha e mudar cor para 'gold' ao passar por cima de links*/
+a:hover {
+    color: gold !important;
+    /* Obs: O '!important é para que continue funcionando mesmo que a cor seja mudada com javascript */
+}
+
+/*Faz com que o texto das páginas (divs) da classe 'aba' (páginas) sejam brancos e alinha o texto ao centro*/
+.aba {
+    color: white;
+    padding: 0% 15%;
+    font-size: 18px;
+}
+
+
+/* CSS da NAVBAR */
+
+/*Alterar as características das abas da navbar*/
+.navbar a {
+    color: white;
+    /* retira o underline sob os links */
+    text-decoration: none;
+    font-size: 25px;
+    /* adiciona espaçamento entre as abas */
+    padding: 15px 40px;
+    /* coloca as abas no meio em relação a imagem */
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+}
+
+.navbar a:not(#logo):hover {
+    background-color: rgb(108, 108, 108); 
+    transition: 0.1s;
+}
+
+
+/* CSS da Aba Home */
+
+/* define que a cor de todos os títulos principais (h1) será 'gold' */
+#projeto p {
+    margin-left: 0%;
+}
+
+#projeto h1 {
+    color: gold;
+}
+
+/* define que a cor de todos os subtítulos (h2) será branca */
+#projeto h2 {
+    color: white;
+}
+
+
+/* CSS da Aba do Mapa Interativo  */
+
+#mapainterativo h1 {
+    color: gold;
+}
+
+/* apenas teste */
+
+#sol {
+    background-color: rgb(252, 245, 55);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+}
+
+#mercurio {
+    background-color: lightgrey;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation: orbita_mercurio 1s linear infinite;
+    transform: rotate(45deg) translateX(50px) rotate(-45deg);
+}
+
+@keyframes orbita_mercurio {
+    from { transform: rotate(0deg) translateX(800%) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(800%) rotate(-360deg);}
+}
+
+#venus {
+    background-color: rgb(241, 214, 133);
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation: orbita_venus 3s linear infinite;
+    transform: rotate(45deg) translateX(70px) rotate(-45deg);
+}
+
+@keyframes orbita_venus {
+    from { transform: rotate(0deg) translateX(100px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(100px) rotate(-360deg);}
+}
+
+#terra {
+    background-color: rgb(36, 218, 246);
+    border-radius: 100%;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation: orbita_terra 5s linear infinite;
+    transform: rotate(45deg) translateX(140px) rotate(-45deg);
+}
+
+@keyframes orbita_terra {
+    from { transform: rotate(0deg) translateX(140px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(140px) rotate(-360deg);}
+}
+
+#marte {
+    background-color: rgb(237, 66, 14);
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation: orbita_marte 8s linear infinite;
+    transform: rotate(45deg) translateX(50px) rotate(-45deg);
+}
+
+@keyframes orbita_marte {
+    from { transform: rotate(0deg) translateX(180px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(180px) rotate(-360deg);}
+}
+
+#jupiter {
+    background-color: rgb(193, 194, 164);
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation: orbita_jupiter 11.8s linear infinite;
+    transform: rotate(45deg) translateX(50px) rotate(-45deg);
+}
+
+@keyframes orbita_jupiter {
+    from { transform: rotate(0deg) translateX(260px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(260px) rotate(-360deg);}
+}
+
+#saturno {
+    background-color: rgb(241, 140, 46);
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation: orbita_saturno 29.6s linear infinite;
+    transform: rotate(45deg) translateX(50px) rotate(-45deg);
+}
+
+@keyframes orbita_saturno {
+    from { transform: rotate(0deg) translateX(300px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(300px) rotate(-360deg);}
+}
+
+#urano {
+    background-color: rgb(104, 235, 255);
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation: orbita_urano 43.7s linear infinite;
+    transform: rotate(45deg) translateX(50px) rotate(-45deg);
+}
+
+@keyframes orbita_urano {
+    from { transform: rotate(0deg) translateX(400px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(400px) rotate(-360deg);}
+}
+
+#netuno {
+    background-color: rgb(22, 37, 248);
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation: orbita_netuno 65.4s linear infinite;
+    transform: rotate(45deg) translateX(50px) rotate(-45deg);
+}
+
+@keyframes orbita_netuno {
+    from { transform: rotate(0deg) translateX(480px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(480px) rotate(-360deg);}
+}
+
+
+/* CSS da Aba de Notícias */
+
+/* Aumenta o a largura da div para abrigar melhor os conteúdos */
+#noticias {
+    padding: 0% 20%;
+}
+
+/* define a cor dos títulos principais (h1) para 'gold' */
+#noticias h1 {
+    color: gold;
+}
+
+/* define que todos os subtítulos (h2) e parágrafos terão cor branca e os afasta das bordas por estas porcentagens */
+#noticias h2, p {
+    color: white;
+    margin-left: 4%;
+    margin-right: 2%;
+}
+
+/* define as características do div de notícias, tal como sua cor de fundo, curvatura, largura e cor de borda*/
+#noticias_layout {
+    background-color:rgb(96, 96, 96);
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 1% 0%;
+}
+
+/* centraliza o título da notícia e determina seu tamanho de fonte e cor */
+.xml_feed_a {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: orange;
+}
+
+/* centraliza as imagens do div de noticias */
+.xml_feed_img {
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: center;
+    width: 90%;
+    height: 65%;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+.xml_feed_img:hover {
+    width: 93%;
+    height: 70%;
+} 
+
+
+/* CSS da Aba de Contato */
+
+/* estilo, design e características da aba contato*/
+
+/* Estreita a div para que o pouco texto ocupe mais de uma linha*/
+#contato {
+    padding: 0% 30%;
+}
+
+/* define as cores dos titulos h1 e h2 */
+#contato h1, h2 {
+    color: gold;
+}
+
+#contato p {
+    margin-left: 0%;
+}
+
+/* adiciona as características de formulário e adiciona um 'padding' para dar espaço entre o texto e a borda */
+#form_contato {
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    border: 2px solid white;
+    padding: 2px 6px;
+}
+
+/* para todas as tags input dentro da div contato, estas características são as padrões */
+#contato input {
+    font-size: 16px;
+    color: white;
+    border-color: gold;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* No caso específico da tag input de ID 'contato_enviar' (botão de enviar) estas características são sobrepostas */
+#contato_enviar {
+    background-color: gold !important;
+    color: lightgray;
+    border-radius: none;
+    font-size: 16px;
+}

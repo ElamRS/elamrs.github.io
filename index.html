@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Astro Map</title>
+        <link rel="icon" type="image/x-icon" href="imagens/favicon.ico"> <!--Adiciona imagem do site na aba-->
+        <link rel="stylesheet" href="css/style.css"> <!--Link externo para o arquivo que contém o CSS-->
+        <script src="javascript/script.js"></script> <!--Link externo para o arquivo que contém o Javascript-->
+    </head>
+    <body>
+        <div id="container"> <!--div principal que contém as demais-->
+            
+            <!--Código para criar a navbar do site-->
+            <div class="navbar">
+                <!--Adiciona o logo do site e, ao clicar sobre, direciona o usuário para a Home-->
+                <a id="logo" href="#mapainterativo" onclick="deixarVisivel('mapainterativo'), mudarCorAba('mapainterativo')"><img src="imagens/logo.png" alt="logo" witdth=150px height="150px"></a>
+                
+                <!--Cria as abas-->
+                <!--O atributo 'onclick' permite que determinado evento aconteça quando se clica sobre a tag, neste caso, quando o usuário clicar sobre uma das tags, a função deixarVisivel será chamada e deixará a div correspondente visível, ao mesmo tempo que esconda as demais. Além de mudar a cor da aba atual para 'gold'-->
+                <a id="a_mapa" href="#mapainterativo" onclick="deixarVisivel('mapainterativo'); mudarCorAba('a_mapa')">Mapa Interativo</a>
+                <a id="a_projeto" href="#projeto" onclick="deixarVisivel('projeto'); mudarCorAba('a_projeto')">Projeto</a>
+                <a id="a_noticias" href="#noticias" onclick="deixarVisivel('noticias'); mudarCorAba('a_noticias')">Notícias</a>
+                <a id="a_contato" href="#contato" onclick="deixarVisivel('contato'); mudarCorAba('a_contato')">Contato</a>
+            </div>
+
+            <!--O atributo hidden mantém as divs, que são como minipáginas dentro da página principal, 
+                escondidas até que se clique na aba que a revela.
+                Ex: ao clicar na aba Notícias a div com ID 'contato' tem seu atributo hidden alterado para false (visível).
+            -->
+
+            <!--Cada div servirá como uma página para o website e suporta todas as tags e elementos do HTML, 
+                basta ir adicionando o conteúdo referente a cada página dentro das tags <div></div>
+            -->
+
+            <hr>
+
+            <!--Div da Home-->
+
+            <!--Div do Mapa Interativo-->
+            <div class="aba" id="mapainterativo">
+                <h1>Mapa Interativo</h1>
+                <!--Testes-->
+                <div class="sistema_solar">
+                    <div id="sol"></div>
+                    <div id="mercurio"><p>Mercúrio</p></div>
+                    <div id="venus"><p>Vênus</p></div>
+                    <div id="terra"><p>Terra</p></div>
+                    <div id="marte"><p>Marte</p></div>
+                    <div id="jupiter"><p>Júpiter</p></div>
+                    <div id="saturno"><p>Saturno</p></div>
+                    <div id="urano"><p>Urano</p></div>
+                    <div id="netuno"><p>Netuno</p></div>
+                </div>
+            </div>
+
+            <div class="aba" id="projeto" hidden>
+                <div id="div_projeto">
+                    <h1>SOBRE NÓS</h1>
+                    <h2>Sejam todos(as) bem-vindos(as)!</h2>
+                    <p>Nós somos alunos do Instituto Federal de Educação, Ciência e Tecnologia de São Paulo - Câmpus São Paulo! Este site foi organizado a partir de um trabalho proposto em classe, cujo tema é Astronomia, com enfoque no nosso Sistema Solar! Trata-se, especialmente, de um mapa interativo, no qual encontram-se todos os planetas deste em órbita pelo Sol. Ao clicar em um dos astros, é aberto um quadro com informações gerais a respeito dele, como questões atribuídas à temperatura, solo, massa, rotação, entre outras.<br><br>A plataforma foi pensada como uma interface que pudesse atender às necessidades dos usuários que tivessem interesse pelo tema e que buscassem uma maneira mais dinâmica de entender a respeito. Dessa forma, as imagens dos astros, juntamente com a mobilidade possível dentro do site, com a disponibilidade de clicar em cada um para obter mais detalhes, por exemplo, são aspectos que contribuem para este entendimento!<br><br>Esperamos muito que gostem e que tenham uma boa experiência! Aproveitem! Caso desejem receber maiores informações (como novas notícias espaciais) em mãos e rapidamente, vão até a aba "Contato" e preencham-a com o que for necessário!</p>
+                </div>
+            </div>
+
+
+            <!--Div da aba de Notícias-->
+            <div class="aba" id="noticias" hidden>
+                <h1>Notícias Espaciais</h1>
+                <div id="noticias_layout">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <rss version="2.0">
+                        <channel>
+                            <item>
+                                <a href="noticias/james webb jupiter/James_Webb.html" target="_blank"><img class="xml_feed_img" src="noticias/james webb jupiter/jupiter_james_webb.png" alt="júpiter pelo jameswebb"></a>
+                                <a class="xml_feed_a" href="noticias/james webb jupiter/James_Webb.html">James Webb captura nova imagem impressionante de Júpiter</a>
+                            </item>
+                        </channel>
+                    </rss>
+
+                    </xml>
+                    
+                </div>
+            </div>
+
+            <!--Div da aba de Contatos-->
+            <div class="aba" id="contato" hidden>
+                <h1>FALE CONOSCO</h1>
+                <p>Escreva para a gente tirar dúvidas, fazer comentários, sugestões ou simplesmente entrar em contato! Ficaremos felizes em receber seu email.<br><br>Email:<a href="mailto:interativeastromap@gmail.com" target="_blank"> interativeastromap@gmail.com</a></p>
+
+                <!--Formulário para receber o nome e email do usuário-->
+                <form id="form_contato">
+                    <p style="padding: 4px 4px;">Se inscreva em nossa Newsletter para receber notícias atualizadas e relevantes sobre astronomia!</p>
+                    <label for="name">Como deseja ser chamado?</label><br>
+                    <input type="text" placeholder="Nome"><br><br>
+                    <label for="email">Nos diga seu email:</label><br>
+                    <input type="email" placeholder="Email"><br><br>
+                    <input id="contato_enviar" type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
