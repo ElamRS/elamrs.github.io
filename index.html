@@ -6,6 +6,7 @@
         <link rel="icon" type="image/x-icon" href="imagens/favicon.ico"> <!--Adiciona imagem do site na aba-->
         <link rel="stylesheet" href="css/style.css"> <!--Link externo para o arquivo que contém o CSS-->
         <script src="javascript/script.js"></script> <!--Link externo para o arquivo que contém o Javascript-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/> 
     </head>
     <body>
         <div id="container"> <!--div principal que contém as demais-->
@@ -13,14 +14,14 @@
             <!--Código para criar a navbar do site-->
             <div class="navbar">
                 <!--Adiciona o logo do site e, ao clicar sobre, direciona o usuário para a Home-->
-                <a id="logo" href="#mapainterativo" onclick="deixarVisivel('mapainterativo'), mudarCorAba('mapainterativo')"><img src="imagens/logo.png" alt="logo" witdth=150px height="150px"></a>
+                <a id="logo" href="#mapainterativo" onclick="deixarVisivel('mapainterativo'), mudarCorAba('mapainterativo')"><img src="imagens/logo.png" alt="logo" witdth=150px height="100px"></a>
                 
                 <!--Cria as abas-->
                 <!--O atributo 'onclick' permite que determinado evento aconteça quando se clica sobre a tag, neste caso, quando o usuário clicar sobre uma das tags, a função deixarVisivel será chamada e deixará a div correspondente visível, ao mesmo tempo que esconda as demais. Além de mudar a cor da aba atual para 'gold'-->
-                <a id="a_mapa" href="#mapainterativo" onclick="deixarVisivel('mapainterativo'); mudarCorAba('a_mapa')">Mapa Interativo</a>
-                <a id="a_projeto" href="#projeto" onclick="deixarVisivel('projeto'); mudarCorAba('a_projeto')">Projeto</a>
-                <a id="a_noticias" href="#noticias" onclick="deixarVisivel('noticias'); mudarCorAba('a_noticias')">Notícias</a>
-                <a id="a_contato" href="#contato" onclick="deixarVisivel('contato'); mudarCorAba('a_contato')">Contato</a>
+                <a id="a_mapa" onclick="deixarVisivel('mapainterativo'); mudarCorAba('a_mapa')">Mapa Interativo</a>
+                <a id="a_projeto" onclick="deixarVisivel('projeto'); mudarCorAba('a_projeto')">Projeto</a>
+                <a id="a_noticias" onclick="deixarVisivel('noticias'); mudarCorAba('a_noticias')">Notícias</a>
+                <a id="a_contato" onclick="deixarVisivel('contato'); mudarCorAba('a_contato')">Contato</a>
             </div>
 
             <!--O atributo hidden mantém as divs, que são como minipáginas dentro da página principal, 
@@ -32,7 +33,6 @@
                 basta ir adicionando o conteúdo referente a cada página dentro das tags <div></div>
             -->
 
-            <hr>
 
             <!--Div da Home-->
 
