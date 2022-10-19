@@ -1,8 +1,8 @@
 /* CSS Geral do website */
 
-/*Mudar a cor de fundo do site para preto*/
+/* Define a cor de fundo do site como preto */
 body {
-    background-color: black;
+    background-color: black; /* Tema escuro alternativo: #282A35*/
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -26,15 +26,34 @@ a:hover {
 
 /*Faz com que o texto das páginas (divs) da classe 'aba' (páginas) sejam brancos e alinha o texto ao centro*/
 .aba {
+    margin-top: 12%;
     color: white;
     padding: 0% 15%;
     font-size: 18px;
 }
 
 
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+
 /* CSS da NAVBAR */
 
+/* Fixa a NavBar no topo */
+
 /*Alterar as características das abas da navbar*/
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 98%;
+    background-color: black; /* Tema escuro alternativo: #282A35*/
+    opacity: 0.9;
+    border-bottom: 4px solid gold;
+}
+
 .navbar a {
     color: white;
     /* retira o underline sob os links */
@@ -51,12 +70,19 @@ a:hover {
 .navbar a:not(#logo):hover {
     background-color: rgb(108, 108, 108); 
     transition: 0.1s;
+    border-radius: 20px;
 }
 
 
-/* CSS da Aba Home */
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+
+/* CSS da Aba Contato */
 
 /* define que a cor de todos os títulos principais (h1) será 'gold' */
+
 #projeto p {
     margin-left: 0%;
 }
@@ -71,13 +97,18 @@ a:hover {
 }
 
 
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+
 /* CSS da Aba do Mapa Interativo  */
 
 #mapainterativo h1 {
     color: gold;
 }
 
-/* apenas teste */
+/* Animações dos Planetas */
 
 #sol {
     background-color: rgb(252, 245, 55);
@@ -102,8 +133,8 @@ a:hover {
 }
 
 @keyframes orbita_mercurio {
-    from { transform: rotate(0deg) translateX(800%) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(800%) rotate(-360deg);}
+    from { transform: rotate(0deg) translateX(80px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(80px) rotate(-360deg);}
 }
 
 #venus {
@@ -136,8 +167,8 @@ a:hover {
 }
 
 @keyframes orbita_terra {
-    from { transform: rotate(0deg) translateX(140px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(140px) rotate(-360deg);}
+    from { transform: rotate(0deg) translateX(200px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(200px) rotate(-360deg);}
 }
 
 #marte {
@@ -153,8 +184,8 @@ a:hover {
 }
 
 @keyframes orbita_marte {
-    from { transform: rotate(0deg) translateX(180px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(180px) rotate(-360deg);}
+    from { transform: rotate(0deg) translateX(230px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(230px) rotate(-360deg);}
 }
 
 #jupiter {
@@ -170,8 +201,8 @@ a:hover {
 }
 
 @keyframes orbita_jupiter {
-    from { transform: rotate(0deg) translateX(260px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(260px) rotate(-360deg);}
+    from { transform: rotate(0deg) translateX(270px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(270px) rotate(-360deg);}
 }
 
 #saturno {
@@ -204,8 +235,8 @@ a:hover {
 }
 
 @keyframes orbita_urano {
-    from { transform: rotate(0deg) translateX(400px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(400px) rotate(-360deg);}
+    from { transform: rotate(0deg) translateX(280px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(280px) rotate(-360deg);}
 }
 
 #netuno {
@@ -221,9 +252,13 @@ a:hover {
 }
 
 @keyframes orbita_netuno {
-    from { transform: rotate(0deg) translateX(480px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(480px) rotate(-360deg);}
+    from { transform: rotate(0deg) translateX(300px) rotate(0deg);}
+    to { transform: rotate(360deg) translateX(300px) rotate(-360deg);}
 }
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
 
 
 /* CSS da Aba de Notícias */
@@ -258,26 +293,26 @@ a:hover {
     display: flex;
     justify-content: center;
     font-size: 20px;
-    color: orange;
+    color: rgb(230, 230, 230);
 }
 
 /* centraliza as imagens do div de noticias */
 .xml_feed_img {
     position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
     float: center;
-    width: 90%;
-    height: 65%;
+    width: 70%;
+    height: 50%;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 2px solid white;
     transition: 0.5s;
 }
 
-.xml_feed_img:hover {
-    width: 93%;
-    height: 70%;
-} 
+
+
+/* ------------------------------------------------------------------------------------------- */
+
 
 
 /* CSS da Aba de Contato */
@@ -310,14 +345,14 @@ a:hover {
 #contato input {
     font-size: 16px;
     color: white;
-    border-color: gold;
-    background-color: black;
+    border-color: white;
+    background-color: #282A35;
     border-radius: 10px;
 }
 
 /* No caso específico da tag input de ID 'contato_enviar' (botão de enviar) estas características são sobrepostas */
 #contato_enviar {
-    background-color: gold !important;
+    background-color: rgb(56, 56, 56) !important;
     color: lightgray;
     border-radius: none;
     font-size: 16px;
