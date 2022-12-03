@@ -4,6 +4,7 @@
 body {
     background-color: black; /* Tema escuro alternativo: #282A35*/
     font-family: 'Source Sans Pro', sans-serif;
+    z-index: 0;
 }
 
 hr {
@@ -47,9 +48,14 @@ a:hover {
 .navbar {
     overflow: hidden;
     position: fixed;
+    /* Define o maior z-index do site (no momento 3) */
+    z-index: 3;
     top: 0;
-    width: 98%;
+    /* Faz com que o tamanho da Navbar seja de 100% da visão do usuário na horizontal e 20% da visão do usuário na vertical */
+    width: 100vw;
+    height: 20vh;
     background-color: black; /* Tema escuro alternativo: #282A35*/
+    /* Torna a Navbar um pouco opaca, para melhorar o design no scroll down */
     opacity: 0.9;
     border-bottom: 4px solid gold;
 }
@@ -60,11 +66,10 @@ a:hover {
     text-decoration: none;
     font-size: 25px;
     /* adiciona espaçamento entre as abas */
-    padding: 15px 40px;
+    padding: 15px 2%;
     /* coloca as abas no meio em relação a imagem */
     vertical-align: middle;
     display: inline-block;
-    height: 100%;
 }
 
 .navbar a:not(#logo):hover {
@@ -106,156 +111,306 @@ a:hover {
 
 #mapainterativo h1 {
     color: gold;
+    /* Garantir que o título do mapa interativo ficará por cima dos elementos do mapa*/
+    position: absolute;
+    z-index: 2;
 }
+
+#divmap {
+    /* Tornar o mapa interativo um dos últimos elementos na pilha horizontal*/
+    position: absolute;
+    z-index: 1;
+}
+
+/* CSS da Div com as informações*/
+#infoastros {
+    position: absolute;
+    top: 23%;
+    right: 2%;
+    background-color: black;
+    border: 1px solid white;
+    padding: 0.5%;
+    border-radius: 2%;
+    /* Designa um valor no eixo horizontal maior do que o do mapa, para que os planetas não passem por cima do Box */
+    z-index: 2;
+}
+
+#infoastros button {
+    /* Posiciona o botão no canto superior direito */
+    position: absolute;
+    top: 1%;
+    right: 5%;
+}
+
+#infoastros h2 {
+    color: gold;
+}
+
 
 /* Animações dos Planetas */
 
-#sol {
-    background-color: rgb(252, 245, 55);
-    border-radius: 100%;
+.sol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 100px yellow;
+    height: 100px;
+    width: 100px;
+}
+
+.mercurio {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: #d35400;
+    height: 35px;
+    width: 35px;
+    margin-left: -1px;
+    margin-top: -10px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #684d3a;
+}
+
+.venus {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: #f39c12;
+    height: 45px;
+    width: 45px;
+    margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #f39c12;
+}
+
+.terra {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: #3779a5;
+    height: 50px;
+    width: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgb(152, 152, 245);
+}
+
+.lua {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    background-color: #7f8c8d;
+    height: 20px;
+    width: 20px;
+    margin-left: -30px;
+    margin-top: -30px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #7f8c8d;
+}
+
+.marte {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: #d65243;
+    height: 40px;
+    width: 40px;
+    margin-left: -20px;
+    margin-top: -10px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #e74e3c;
+}
+
+.jupiter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: black;
+    height: 90px;
+    width: 90px;
+    margin-left: -30px;
+    margin-top: -30px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #e7d1a7;
+}
+
+.saturno {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: black;
+    height: 80px;
+    width: 80px;
+    margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 50%;
+}
+
+.urano {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: black;
+    height: 54px;
+    width: 54px;
+    margin-left: -25px;
+    margin-top: -25px;
+    border-radius: 50%;
+}
+
+.netuno {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: #34395e;
+    height: 56px;
+    width: 56px;
+    margin-left: -25px;
+    margin-top: -25px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #3498bd;
+}
+
+.orbita-mercurio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    border-style: dotted;
+    border-color: rgb(88, 88, 88);
+    border-radius: 50%;
+    animation: spin 10s linear infinite;
+}
+
+.orbita-venus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+    border-style: dotted;
+    border-color: rgb(88, 88, 88);
+    border-radius: 50%;
+    animation: spin 16s linear infinite;
+}
+
+.orbita-terra {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    margin-top: -225px;
+    margin-left: -225px;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: rgb(88, 88, 88);
+    border-radius: 50%;
+    animation: spin 20s linear infinite;
+}
+
+.orbita-lua {
+    position: absolute;
+    top: 44.5%;
+    left: 94.5%;
     width: 50px;
     height: 50px;
+    margin-top: -225px;
+    margin-left: -225px;
+    border-radius: 50%;
+    animation: spin 14s linear infinite;
+}
+
+.orbita-marte {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
+    width: 600px;
+    height: 600px;
+    margin-top: -300px;
+    margin-left: -300px;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: rgb(88, 88, 88);
+    border-radius: 50%;
+    animation: spin 24s linear infinite;
 }
 
-#mercurio {
-    background-color: lightgrey;
-    border-radius: 100%;
-    width: 15px;
-    height: 15px;
+.orbita-jupiter {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
-    animation: orbita_mercurio 1s linear infinite;
-    transform: rotate(45deg) translateX(50px) rotate(-45deg);
+    width: 800px;
+    height: 800px;
+    margin-top: -400px;
+    margin-left: -400px;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: rgb(88, 88, 88);
+    border-radius: 50%;
+    animation: spin 40s linear infinite;
 }
 
-@keyframes orbita_mercurio {
-    from { transform: rotate(0deg) translateX(80px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(80px) rotate(-360deg);}
-}
-
-#venus {
-    background-color: rgb(241, 214, 133);
-    border-radius: 100%;
-    width: 25px;
-    height: 25px;
+.orbita-saturno {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
-    animation: orbita_venus 3s linear infinite;
-    transform: rotate(45deg) translateX(70px) rotate(-45deg);
+    width: 950px;
+    height: 950px;
+    margin-top: -475px;
+    margin-left: -475px;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: rgb(88, 88, 88);
+    border-radius: 50%;
+    animation: spin 60s linear infinite;
 }
 
-@keyframes orbita_venus {
-    from { transform: rotate(0deg) translateX(100px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(100px) rotate(-360deg);}
-}
-
-#terra {
-    background-color: rgb(36, 218, 246);
-    border-radius: 100%;
-    width: 28px;
-    height: 28px;
+.orbita-urano {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
-    animation: orbita_terra 5s linear infinite;
-    transform: rotate(45deg) translateX(140px) rotate(-45deg);
+    width: 1050px;
+    height: 1050px;
+    margin-top: -525px;
+    margin-left: -525px;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: rgb(88, 88, 88);
+    border-radius: 50%;
+    animation: spin 80s linear infinite;
 }
 
-@keyframes orbita_terra {
-    from { transform: rotate(0deg) translateX(200px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(200px) rotate(-360deg);}
-}
-
-#marte {
-    background-color: rgb(237, 66, 14);
-    border-radius: 100%;
-    width: 25px;
-    height: 25px;
+.orbita-netuno {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
-    animation: orbita_marte 8s linear infinite;
-    transform: rotate(45deg) translateX(50px) rotate(-45deg);
+    width: 1200px;
+    height: 1200px;
+    margin-top: -600px;
+    margin-left: -600px;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: rgb(88, 88, 88);
+    border-radius: 50%;
+    animation: spin 100s linear infinite;
 }
 
-@keyframes orbita_marte {
-    from { transform: rotate(0deg) translateX(230px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(230px) rotate(-360deg);}
+/* Animação da rotação dos planetas */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }
-
-#jupiter {
-    background-color: rgb(193, 194, 164);
-    border-radius: 100%;
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    animation: orbita_jupiter 11.8s linear infinite;
-    transform: rotate(45deg) translateX(50px) rotate(-45deg);
-}
-
-@keyframes orbita_jupiter {
-    from { transform: rotate(0deg) translateX(270px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(270px) rotate(-360deg);}
-}
-
-#saturno {
-    background-color: rgb(241, 140, 46);
-    border-radius: 100%;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    animation: orbita_saturno 29.6s linear infinite;
-    transform: rotate(45deg) translateX(50px) rotate(-45deg);
-}
-
-@keyframes orbita_saturno {
-    from { transform: rotate(0deg) translateX(300px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(300px) rotate(-360deg);}
-}
-
-#urano {
-    background-color: rgb(104, 235, 255);
-    border-radius: 100%;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    animation: orbita_urano 43.7s linear infinite;
-    transform: rotate(45deg) translateX(50px) rotate(-45deg);
-}
-
-@keyframes orbita_urano {
-    from { transform: rotate(0deg) translateX(280px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(280px) rotate(-360deg);}
-}
-
-#netuno {
-    background-color: rgb(22, 37, 248);
-    border-radius: 100%;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    animation: orbita_netuno 65.4s linear infinite;
-    transform: rotate(45deg) translateX(50px) rotate(-45deg);
-}
-
-@keyframes orbita_netuno {
-    from { transform: rotate(0deg) translateX(300px) rotate(0deg);}
-    to { transform: rotate(360deg) translateX(300px) rotate(-360deg);}
-}
-
 
 /* ---------------------------------------------------------------------------------------------- */
 
@@ -274,22 +429,19 @@ a:hover {
 }
 
 /* define que todos os subtítulos (h2) e parágrafos terão cor branca e os afasta das bordas por estas porcentagens */
-#noticias h2, p {
+#noticias h2, h3, p {
     color: white;
-    margin-left: 4%;
+    margin-left: 2%;
     margin-right: 2%;
 }
 
 /* define as características do div de notícias, tal como sua cor de fundo, curvatura, largura e cor de borda*/
 #noticias_layout {
-    background-color:rgb(96, 96, 96);
-    border-radius: 10px;
-    border: 2px solid white;
     padding: 1% 0%;
 }
 
 /* centraliza o título da notícia e determina seu tamanho de fonte e cor */
-.xml_feed_a {
+.feed_a {
     display: flex;
     justify-content: center;
     font-size: 20px;
@@ -297,19 +449,41 @@ a:hover {
 }
 
 /* centraliza as imagens do div de noticias */
-.xml_feed_img {
+.feed_img {
     position: relative;
-    margin-left: 15%;
-    margin-right: 15%;
-    float: center;
-    width: 70%;
-    height: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left;
+    width: 130px;
+    height: 130px;
     border-radius: 5px;
     border: 2px solid white;
     transition: 0.5s;
 }
 
+/* Faz com que, quando o usuário passe o mouse sobre a imagem, ela aumente de tamanho*/
+.feed_img:hover {
+    height: 140px;
+    width: 140px;
+    transition: 0.2s;
+}
 
+/* Configurações das divs que contém as notícias */
+.news {
+    left: 0%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2%;
+    background-color: rgb(63, 63, 63);
+}
+
+/* O que deve ser feito quando o usuário passar o mouse sobre uma destas divs */
+.news:hover {
+    background-color: rgb(121, 121, 121);
+    transition: 0.4s;
+}
 
 /* ------------------------------------------------------------------------------------------- */
 
@@ -319,18 +493,29 @@ a:hover {
 
 /* estilo, design e características da aba contato*/
 
-/* Estreita a div para que o pouco texto ocupe mais de uma linha*/
-#contato {
-    padding: 0% 30%;
+.conteudo {
+    display: table;
 }
+
 
 /* define as cores dos titulos h1 e h2 */
-#contato h1, h2 {
+#contato h3{
     color: gold;
+    font-size: 37px;
+    margin-right: 30%;
 }
 
-#contato p {
+#contato p, h3{
     margin-left: 0%;
+    font-size: 120%;
+}
+
+
+.texto{
+    display: table-cell;
+}
+.formulario{
+    display: table-cell;
 }
 
 /* adiciona as características de formulário e adiciona um 'padding' para dar espaço entre o texto e a borda */
@@ -343,17 +528,39 @@ a:hover {
 
 /* para todas as tags input dentro da div contato, estas características são as padrões */
 #contato input {
-    font-size: 16px;
+    font-size: 20px;
+    height: 50px;
+    width: 500px;
     color: white;
     border-color: white;
     background-color: #282A35;
     border-radius: 10px;
 }
 
+
+#contato textarea {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    height: 200px;
+    width: 500px;
+    color: white;
+    border-color: white;
+    background-color: #282A35;
+    border-radius: 10px;
+}
+
+
 /* No caso específico da tag input de ID 'contato_enviar' (botão de enviar) estas características são sobrepostas */
 #contato_enviar {
-    background-color: rgb(56, 56, 56) !important;
+    background-color: rgb(56, 56, 56);
+    margin-top: 15px;
+    height: 50%;
+    width: 100px;
     color: lightgray;
-    border-radius: none;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#contato placeholder {
+    font-family: 'Source Sans Pro', sans-serif;
 }

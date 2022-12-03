@@ -13,8 +13,8 @@
             
             <!--Código para criar a navbar do site-->
             <div class="navbar">
-                <!--Adiciona o logo do site e, ao clicar sobre, direciona o usuário para a Home-->
-                <a id="logo" href="#mapainterativo" onclick="deixarVisivel('mapainterativo'), mudarCorAba('mapainterativo')"><img src="imagens/logo.png" alt="logo" witdth=150px height="100px"></a>
+                <!--Adiciona o logo do site-->
+                <a id="logo" href="#mapainterativo"><img src="imagens/logo.png" alt="logo" witdth=200px height="150px"></a>
                 
                 <!--Cria as abas-->
                 <!--O atributo 'onclick' permite que determinado evento aconteça quando se clica sobre a tag, neste caso, quando o usuário clicar sobre uma das tags, a função deixarVisivel será chamada e deixará a div correspondente visível, ao mesmo tempo que esconda as demais. Além de mudar a cor da aba atual para 'gold'-->
@@ -40,16 +40,110 @@
             <div class="aba" id="mapainterativo">
                 <h1>Mapa Interativo</h1>
                 <!--Testes-->
-                <div class="sistema_solar">
-                    <div id="sol"></div>
-                    <div id="mercurio"><p>Mercúrio</p></div>
-                    <div id="venus"><p>Vênus</p></div>
-                    <div id="terra"><p>Terra</p></div>
-                    <div id="marte"><p>Marte</p></div>
-                    <div id="jupiter"><p>Júpiter</p></div>
-                    <div id="saturno"><p>Saturno</p></div>
-                    <div id="urano"><p>Urano</p></div>
-                    <div id="netuno"><p>Netuno</p></div>
+                
+                <!--Uma div lateral que será aberta quando o usuário clicar sobre um astro-->
+                <div id="infoastros" hidden>
+                    <button onclick='document.getElementById("infoastros").hidden=true'>X</button>
+                    <!--Div com as informações sobre o Sol-->
+                    <div id="infosol" hidden>
+                        <h1>Sol</h1>
+                    </div>
+                    <!--Div com as informações sobre Mercúrio-->
+                    <div id="infomercurio" hidden>
+                        <h1>Mercurio</h1>
+                    </div>
+                    <!--Div com as informações sobre Vênus-->
+                    <div id="infovenus" hidden>
+
+                    </div>
+                    <!--Div com as informações sobre a Terra-->
+                    <div id="infoterra" hidden>
+
+                    </div>
+                    <!--Div com as informações sobre a Lua-->
+                    <div id="infolua" hidden>
+                        <h1>Lua</h1>
+                    </div>
+                    <!--Div com as informações sobre Marte-->
+                    <div id="infomarte" hidden>
+                        <h1>Marte</h1>
+                    </div>
+                    <!--Div com as informações sobre Júpiter-->
+                    <div id="infojupiter" hidden>
+                        <h1>Júpiter</h1>
+                    </div>
+                    <!--Div com as informações sobre Saturno-->
+                    <div id="infosaturno" hidden>
+                        <h1>Saturno</h1>
+                    </div>
+                    <!--Div com as informações sobre Urano-->
+                    <div id="infourano" hidden>
+                        <h1>Urano</h1>
+                    </div>
+                    <!--Div com as informações sobre Netuno-->
+                    <div id="infonetuno" hidden>
+                        <h2>Netuno</h2>
+                        <img src="imagens/info-astros/Netuno.jpg" alt="netuno_voyager2" width="350px" height="350px">
+                        <ul>
+                            <li>Diâmetro equatorial: 49 528 km</li>
+                            <li>Área da superfície: 7,6183×109 km²</li>
+                            <li>Volume: 6,254×1013 km³</li>
+                            <li>Massa: 1,0243×1026 kg</li>
+                            <li>Densidade média: 1,638 g/cm³</li>
+                            <li>Gravidade equatorial: 11,15 m/s² 1,14 g</li>
+                            <li>Período de rotação: 0,6713 dia (16h 6min 36s)</li>
+                            <li>Velocidade de escape: 23,5 km/s</li>
+                            <li>Inclinação axial: 28,32°</li>
+                            <li>Albedo: 0,290 (Bond)  0,41 (geom.)</li>
+                            <li>Temperatura média: −223,15 ºC</li>
+                            <li>mínima: −235 ºC</li>
+                            <li>Magnitude aparente: 8,02 a 7,78</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="divmapa">
+                    <div class="sistema_solar">
+                        <!--Sol-->
+                        <div class="sol"><img src="imagens/planetas/sun.png" onclick="info('infosol')" width="100px" height="100px">
+                            <!--Mercúrio-->
+                            <section class="orbita-mercurio">
+                                <section class="mercurio"><img src="imagens/planetas/mercury.png" onclick="info('infomercurio')" width="35px" height="35px"></section>
+                            </section>
+                            <!--Vênus-->
+                            <div class="orbita-venus">
+                                <div class="venus"><img src="imagens/planetas/venus.png" onclick="info('infovenus')" width="45px" height="45px"></div>
+                            </div>
+                            <!--Terra-->
+                            <div class="orbita-terra">
+                                <div class="terra"><img src="imagens/planetas/earth.png" onclick="info('infoterra')" width="50px" heigth="50px"></div>
+                                <!--Lua-->
+                                <div class="orbita-lua">
+                                    <div class="lua"><img src="imagens/planetas/luas/moon.png" onclick="info('infolua')" width="20px" height="20px"></div>
+                                </div>
+                            </div>
+                            <!--Marte-->
+                            <div class="orbita-marte">
+                                <div class="marte"><img src="imagens/planetas/mars.png" onclick="info('infomarte')" width="40px" height="40px"></div>
+                            </div>
+                            <!--Júpiter-->
+                            <div class="orbita-jupiter">
+                                <div class="jupiter"><img src="imagens/planetas/jupiter.png" width="90px" height="90px"></div>
+                            </div>
+                            <!--Saturno-->
+                            <div class="orbita-saturno">
+                                <div class="saturno"><img src="imagens/planetas/saturn.png" width="80px" height="80px"></div>
+                            </div>
+                            <!--Urano-->
+                            <div class="orbita-urano">
+                                <div class="urano"><img src="imagens/planetas/uranus.png" width="62px" height="62px"></div>
+                            </div>
+                            <!--Netuno-->
+                            <div class="orbita-netuno">
+                                <div class="netuno"><img src="imagens/planetas/neptune.png" onclick="info('infonetuno')" width="64px" height="64px"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -61,41 +155,164 @@
                 </div>
             </div>
 
+            <!--------------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------------->
 
             <!--Div da aba de Notícias-->
             <div class="aba" id="noticias" hidden>
                 <h1>Notícias Espaciais</h1>
                 <div id="noticias_layout">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <rss version="2.0">
-                        <channel>
-                            <item>
-                                <a href="noticias/james webb jupiter/James_Webb.html" target="_blank"><img class="xml_feed_img" src="noticias/james webb jupiter/jupiter_james_webb.png" alt="júpiter pelo jameswebb"></a>
-                                <a class="xml_feed_a" href="noticias/james webb jupiter/James_Webb.html">James Webb captura nova imagem impressionante de Júpiter</a>
-                            </item>
-                        </channel>
-                    </rss>
+                        <!--James Webb Júpiter-->
+                        <section class="news">
+                            <a href="https://olhardigital.com.br/2022/08/22/ciencia-e-espaco/telescopio-espacial-james-webb-registra-imagens-incriveis-de-jupiter-veja/" target="_blank">
+                            <img class="feed_img" src="noticias/jupiter_james_webb.png"></a>
 
-                    </xml>
-                    
+                            <a href="https://olhardigital.com.br/2022/08/22/ciencia-e-espaco/telescopio-espacial-james-webb-registra-imagens-incriveis-de-jupiter-veja/" target="_blank">
+                            <h3>Telescópio Espacial James Webb registra imagens incríveis de Júpiter</h3></a>
+                            
+                            <a href="https://olhardigital.com.br/2022/08/22/ciencia-e-espaco/telescopio-espacial-james-webb-registra-imagens-incriveis-de-jupiter-veja/" target="_blank">
+                            <p>O Telescópio Espacial James Webb registrou imagens incríveis de Júpiter, o maior planeta do Sistema Solar. Em algumas fotografias...</p></a>
+                        </section>
+                        
+
+                        <!--Impacto Meteorito-->
+                        <section class="news">
+                            <a href="https://www.uol.com.br/tilt/noticias/afp/2022/10/27/impacto-de-meteorito-em-marte-e-ouvido-ao-vivo-pela-nasa.htm" target="_blank">
+                            <img class="feed_img" src="noticias/calotas-polares-marte.jpg"></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/afp/2022/10/27/impacto-de-meteorito-em-marte-e-ouvido-ao-vivo-pela-nasa.htm" target="_blank">
+                            <h3>Meteoroide deixou enorme cratera e desenterrou água em Marte</h3></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/afp/2022/10/27/impacto-de-meteorito-em-marte-e-ouvido-ao-vivo-pela-nasa.htm" target="_blank">
+                            <p>Cientistas da Nasa que estudam Marte tiveram uma grata surpresa, ao descobrirem o impacto de um meteoroide, que caiu no Planeta Ver...</p></a>
+                        </section>
+
+                        <!--Chuva de Meteoros-->
+                        <section class="news">
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/08/sabado-agitado-chuva-de-meteoros-conjuncao-lua-jupiter-e-mercurio-visivel.htm" target="_blank">
+                            <img class="feed_img" src="noticias/chuva-de-meteoros.jpg"></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/08/sabado-agitado-chuva-de-meteoros-conjuncao-lua-jupiter-e-mercurio-visivel.htm" target="_blank">
+                            <h3>Sábado agitado: chuva de meteoros, conjunção Lua-Júpiter e Mercúrio visível</h3></a>
+                            
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/08/sabado-agitado-chuva-de-meteoros-conjuncao-lua-jupiter-e-mercurio-visivel.htm" target="_blank">
+                            <p>Outubro guarda duas chuvas de meteoros, e a primeira delas acontece neste sábado (8). Infelizmente, não seremos muito privilegiados na...</p></a>
+                        </section>
+
+                        <!--Eclipse-->
+                        <section class="news">
+                            <a href="https://www.opovo.com.br/noticias/curiosidades/2022/11/03/eclipse-e-meteoros-fenomeno-de-astronomia-em-novembro-de-2022.html" target="_blank">
+                            <img class="feed_img" src="noticias/eclipse_lunar_lua_de_sangue.jpg"></a>
+                            
+                            <a href="https://www.opovo.com.br/noticias/curiosidades/2022/11/03/eclipse-e-meteoros-fenomeno-de-astronomia-em-novembro-de-2022.html" target="_blank">
+                            <h3> Eclipse e meteoros: fenômeno de astronomia em novembro de 2022</h3></a>
+
+                            <a href="https://www.opovo.com.br/noticias/curiosidades/2022/11/03/eclipse-e-meteoros-fenomeno-de-astronomia-em-novembro-de-2022.html" target="_blank">
+                            <p>O mês de novembro de 2022 reserva alguns fenômenos astronômicos importantes ao longo dos próximos dias. Entre os eventos, destaca...</p></a>
+                        </section>
+
+                        <!--Asteroides Exploraçãp-->
+                        <section class="news">
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/30/nasa-confirma-missao-psique-para-explorar-asteroide-cheio-niquel-e-ferro.htm" target="_blank">
+                            <img class="feed_img" src="noticias/analisar-os-asteroides.jpg"></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/30/nasa-confirma-missao-psique-para-explorar-asteroide-cheio-niquel-e-ferro.htm" target="_blank">
+                            <h3> Nasa confirma missão para explorar asteroide que vale US$ 10 quadrilhões</h3></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/30/nasa-confirma-missao-psique-para-explorar-asteroide-cheio-niquel-e-ferro.htm" target="_blank">
+                            <p>Nasa está focada em asteroides nestes últimos tempos. Depois da bem-sucedida missão Dart, que desviou a rota do asteroide Dimorphos...</p></a>
+                        </section>
+
+                        <!--Morte Estrela-->
+                        <section class="news">
+                            <a href="https://www.bbc.com/portuguese/vert-fut-63113624" target="_blank">
+                            <img class="feed_img" src="noticias/nebulosa.jpg"></a>
+
+                            <a href="https://www.bbc.com/portuguese/vert-fut-63113624" target="_blank">
+                            <h3> O que acontece quando uma estrela morre?</h3></a> 
+
+                            <a href="https://www.bbc.com/portuguese/vert-fut-63113624" target="_blank">
+                            <p>Daqui a bilhões de anos, quando nosso Sol se aproximar do fim da vida, e os núcleos de hélio começarem a se fundir em seu interior...</p></a>
+                        </section>
+
+                        <!--Planeta Marshmellow-->
+                        <section class="news">
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/24/planeta-marshmallow-e-descoberto-proximo-a-estrela-ana-vermelha.htm" target="_blank">
+                            <img class="feed_img" src="noticias/planeta-marshmellow.jpg"></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/24/planeta-marshmallow-e-descoberto-proximo-a-estrela-ana-vermelha.htm" target="_blank">
+                            <h3> Planeta 'marshmallow' próximo a estrela anã vermelha intriga cientistas</h3></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/24/planeta-marshmallow-e-descoberto-proximo-a-estrela-ana-vermelha.htm" target="_blank">
+                            <p>O planeta "TOI-3757 b" recém-descoberto por astrônomos possui algumas características curiosas, como ser maior até do que Júpite...</p></a>
+                        </section>
+
+                        <!--Anel de Fogo Eclipse-->
+                        <section class="news">
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/11/02/veja-o-sol-virar-um-anel-de-fogo.htm" target="_blank">
+                            <img class="feed_img" src="noticias/eclipse-sol-anel-de-fogo.jpg"></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/11/02/veja-o-sol-virar-um-anel-de-fogo.htm" target="_blank">
+                            <h3>Veja o Sol virar um 'anel de fogo' no eclipse que a Nasa filmou do espaço</h3></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/11/02/veja-o-sol-virar-um-anel-de-fogo.htm" target="_blank">
+                            <p>O eclipse solar do último dia 25 de outubro não foi visível do Brasil, mas rendeu belas imagens pelo mundo todo. Do espaço, a vista foi aind...</p></a>
+                        </section>
+
+                        <!--Gato em Marte-->
+                        <section class="news">
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/12/perseverance-robo-da-nasa-encontra-gato-em-marte-veja-foto.htm" target="_blank">
+                            <img class="feed_img" src="noticias/gato-loaf.jpg"></a>
+
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/12/perseverance-robo-da-nasa-encontra-gato-em-marte-veja-foto.htm" target="_blank">
+                            <h3>Perseverance: robô da Nasa encontra "gato" em Marte; veja foto</h3></a> 
+                            
+                            <a href="https://www.uol.com.br/tilt/noticias/redacao/2022/10/12/perseverance-robo-da-nasa-encontra-gato-em-marte-veja-foto.htm" target="_blank">
+                            <p>O Perseverance, robô da Nasa que está explorando Marte em busca de sinais de vida, flagrou um curioso objeto na superfície do planeta: u...</p></a>
+                        </section>
+
+                        <!--Vida Encelado-->
+                        <section class="news">
+                            <a href="https://www.uol.com.br/tilt/colunas/thiago-goncalves/2022/09/26/lua-de-saturno-desenvolvimento-vida-fora-da-terra-sinais-astrobiologia.htm" target="_blank">
+                            <img class="feed_img" src="noticias/encelado.jpg"></a>
+
+                            <a href="https://www.uol.com.br/tilt/colunas/thiago-goncalves/2022/09/26/lua-de-saturno-desenvolvimento-vida-fora-da-terra-sinais-astrobiologia.htm" target="_blank">
+                            <h3>Busca por vida fora da Terra tem um alvo promissor: uma lua de Saturno</h3></a>
+
+                            <a href="https://www.uol.com.br/tilt/colunas/thiago-goncalves/2022/09/26/lua-de-saturno-desenvolvimento-vida-fora-da-terra-sinais-astrobiologia.htm" target="_blank">
+                            <p>Será que encontramos a última peça do quebra-cabeça para criar vida fora da Terra? Um trabalho recente publicado no periódico da Academ...</p></a>
+                        </section>
                 </div>
             </div>
 
+            <!--------------------------------------------------------------------------------------------------------->
+            <!--------------------------------------------------------------------------------------------------------->
+        
             <!--Div da aba de Contatos-->
             <div class="aba" id="contato" hidden>
-                <h1>FALE CONOSCO</h1>
-                <p>Escreva para a gente tirar dúvidas, fazer comentários, sugestões ou simplesmente entrar em contato! Ficaremos felizes em receber seu email.<br><br>Email:<a href="mailto:interativeastromap@gmail.com" target="_blank"> interativeastromap@gmail.com</a></p>
-
-                <!--Formulário para receber o nome e email do usuário-->
-                <form id="form_contato">
-                    <p style="padding: 4px 4px;">Se inscreva em nossa Newsletter para receber notícias atualizadas e relevantes sobre astronomia!</p>
-                    <label for="name">Como deseja ser chamado?</label><br>
-                    <input type="text" placeholder="Nome"><br><br>
-                    <label for="email">Nos diga seu email:</label><br>
-                    <input type="email" placeholder="Email"><br><br>
-                    <input id="contato_enviar" type="submit" value="Enviar">
-                </form>
+              <section class="content">
+              <div class="conteudo">
+                    <div class="texto">
+                    <h3>Formulário de Contato</h3>
+                    <p>Caso deseje, nos envie suas dúvidas, comentários, sugestões ou simplesmente entre em contato! Ficaremos felizes em receber sua mensagem!<br><br>Email:<a href="mailto:interativeastromap@gmail.com" target="_blank"> interativeastromap@gmail.com</a></p> 
+                    </div>
+                  
+                    <div class="formulario">
+                       <form class="form" method="POST" action="./email.php">
+                       <p>Como deseja ser chamado?</p>
+                       <input class="field" name="name" placeholder="Nome"><br><br>
+                       <p>Nos diga seu e-mail:</p>
+                       <input class="field" name="email" placeholder="E-mail"><br><br>
+                       <p>Deixe sua mensagem:</p>
+                       <textarea class="field" name="message" placeholder="Digite sua mensagem aqui."></textarea>
+                       <input id="contato_enviar" type="submit" value="Enviar">
+                       </form>
+              </div>
+              </section>
+            </div>    
+                
             </div>
+
         </div>
     </body>
 </html>

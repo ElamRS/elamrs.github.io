@@ -34,4 +34,25 @@ function mudarCorAba(id) {
             document.getElementById(ids[i]).style.color = "white";
         }
     }
-} 
+}
+
+// Função responsável por tornar a Div e as Sections com as informações dos Astros visíveis uma vez que o 
+// usuário clique sobre algum deles
+
+function info(id) {
+    const ids = ['infosol', 'infomercurio', 'infovenus', 'infoterra', 'infolua', 'infomarte', 'infojupiter', 'infosaturno', 'infourano', 'infonetuno']
+
+    // Assim que o usuário clicar sobre um dos Astros a div 'infoastros' ficará visível e permanecerá visível até que o usuário a feche
+    document.getElementById("infoastros").hidden = false;
+
+    // Laço for para iterar sobre o vetor ids, para tornar apenas a section com o mesmo id do parâmetro visível 
+    for (i=0; i<ids.length; i++) {
+        if (ids[i]==id) {
+            // se o ID no índice i for o mesmo passado pelo parâmetro, então a section correspondente é tornada visível
+            document.getElementById(ids[i]).hidden = false;
+        } else {
+            // se o ID no índice i for diferente do passado pelo parâmetro, então a section correspondente fica invisível
+            document.getElementById(ids[i]).hidden = true;
+        }
+    }
+}
