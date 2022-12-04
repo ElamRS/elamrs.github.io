@@ -44,106 +44,92 @@
                 <!--Uma div lateral que será aberta quando o usuário clicar sobre um astro-->
                 <div id="infoastros" hidden>
                     <button onclick='document.getElementById("infoastros").hidden=true'>X</button>
-                    <!--Div com as informações sobre o Sol-->
-                    <div id="infosol" hidden>
+                    <!--Section com as informações sobre o Sol-->
+                    <section id="infosol" hidden>
                         <h1>Sol</h1>
-                    </div>
-                    <!--Div com as informações sobre Mercúrio-->
-                    <div id="infomercurio" hidden>
-                        <h1>Mercurio</h1>
-                    </div>
-                    <!--Div com as informações sobre Vênus-->
-                    <div id="infovenus" hidden>
+                    </section>
+                    <!--Section com as informações sobre Mercúrio-->
+                    <section id="infomercurio" hidden>
+                        <h1>Mercúrio</h1>
+                    </section>
+                    <!--Section com as informações sobre Vênus-->
+                    <section id="infovenus" hidden>
+                        <h2>Vênus</h2>
+                    </section>
+                    <!--Section com as informações sobre a Terra-->
+                    <section id="infoterra" hidden>
+                        <h2>Terra</h2>
+                    </section>
+                    <!--Section com as informações sobre a Lua-->
+                    <section id="infolua" hidden>
+                        <h2>Lua</h2>
 
-                    </div>
-                    <!--Div com as informações sobre a Terra-->
-                    <div id="infoterra" hidden>
-
-                    </div>
-                    <!--Div com as informações sobre a Lua-->
-                    <div id="infolua" hidden>
-                        <h1>Lua</h1>
-                    </div>
-                    <!--Div com as informações sobre Marte-->
-                    <div id="infomarte" hidden>
+                    </section>
+                    <!--Section com as informações sobre Marte-->
+                    <section id="infomarte" hidden>
                         <h1>Marte</h1>
-                    </div>
-                    <!--Div com as informações sobre Júpiter-->
-                    <div id="infojupiter" hidden>
+
+                    </section>
+                    <!--Section com as informações sobre Júpiter-->
+                    <section id="infojupiter" hidden>
                         <h1>Júpiter</h1>
-                    </div>
-                    <!--Div com as informações sobre Saturno-->
-                    <div id="infosaturno" hidden>
+
+                    </section>
+                    <!--Section com as informações sobre Saturno-->
+                    <section id="infosaturno" hidden>
                         <h1>Saturno</h1>
-                    </div>
-                    <!--Div com as informações sobre Urano-->
-                    <div id="infourano" hidden>
+
+                    </section>
+                    <!--Section com as informações sobre Urano-->
+                    <section id="infourano" hidden>
                         <h1>Urano</h1>
-                    </div>
-                    <!--Div com as informações sobre Netuno-->
-                    <div id="infonetuno" hidden>
+
+                    </section>
+                    <!--Section com as informações sobre Netuno-->
+                    <section id="infonetuno" hidden>
                         <h2>Netuno</h2>
                         <img src="imagens/info-astros/Netuno.jpg" alt="netuno_voyager2" width="350px" height="350px">
                         <ul>
-                            <li>Diâmetro equatorial: 49 528 km</li>
-                            <li>Área da superfície: 7,6183×109 km²</li>
-                            <li>Volume: 6,254×1013 km³</li>
-                            <li>Massa: 1,0243×1026 kg</li>
-                            <li>Densidade média: 1,638 g/cm³</li>
-                            <li>Gravidade equatorial: 11,15 m/s² 1,14 g</li>
-                            <li>Período de rotação: 0,6713 dia (16h 6min 36s)</li>
-                            <li>Velocidade de escape: 23,5 km/s</li>
-                            <li>Inclinação axial: 28,32°</li>
-                            <li>Albedo: 0,290 (Bond)  0,41 (geom.)</li>
-                            <li>Temperatura média: −223,15 ºC</li>
-                            <li>mínima: −235 ºC</li>
-                            <li>Magnitude aparente: 8,02 a 7,78</li>
+                            <li><strong>Diâmetro equatorial:</strong> 49 528 km</li>
+                            <li><strong>Área da superfície:</strong> 7,6183<sup>×</sup>109 km²</li>
+                            <li><strong>Volume:</strong> 6,254<sup>×</sup>1013 km³</li>
+                            <li><strong>Massa:</strong> 1,0243<sup>×</sup>1026 kg</li>
+                            <li><strong>Densidade média:</strong> 1,638 g/cm³</li>
+                            <li><strong>Gravidade equatorial:</strong> 11,15 m/s² 1,14 g</li>
+                            <li><strong>Período de rotação:</strong> 0,6713 dia (16h 6min 36s)</li>
+                            <li><strong>Velocidade de escape:</strong> 23,5 km/s</li>
+                            <li><strong>Inclinação axial:</strong> 28,32°</li>
+                            <li><strong>Albedo:</strong> 0,290 (Bond)  0,41 (geom.)</li>
+                            <li><strong>Temperatura média:</strong> −223,15 ºC</li>
+                            <li><strong>Mínima:</strong> −235 ºC</li>
+                            <li><strong>Magnitude aparente:</strong> 8,02 a 7,78</li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
 
                 <div id="divmapa">
                     <div class="sistema_solar">
                         <!--Sol-->
-                        <div class="sol"><img src="imagens/planetas/sun.png" onclick="info('infosol')" width="100px" height="100px">
-                            <!--Mercúrio-->
-                            <section class="orbita-mercurio">
-                                <section class="mercurio"><img src="imagens/planetas/mercury.png" onclick="info('infomercurio')" width="35px" height="35px"></section>
-                            </section>
-                            <!--Vênus-->
-                            <div class="orbita-venus">
-                                <div class="venus"><img src="imagens/planetas/venus.png" onclick="info('infovenus')" width="45px" height="45px"></div>
-                            </div>
-                            <!--Terra-->
-                            <div class="orbita-terra">
-                                <div class="terra"><img src="imagens/planetas/earth.png" onclick="info('infoterra')" width="50px" heigth="50px"></div>
-                                <!--Lua-->
-                                <div class="orbita-lua">
-                                    <div class="lua"><img src="imagens/planetas/luas/moon.png" onclick="info('infolua')" width="20px" height="20px"></div>
-                                </div>
-                            </div>
-                            <!--Marte-->
-                            <div class="orbita-marte">
-                                <div class="marte"><img src="imagens/planetas/mars.png" onclick="info('infomarte')" width="40px" height="40px"></div>
-                            </div>
-                            <!--Júpiter-->
-                            <div class="orbita-jupiter">
-                                <div class="jupiter"><img src="imagens/planetas/jupiter.png" width="90px" height="90px"></div>
-                            </div>
-                            <!--Saturno-->
-                            <div class="orbita-saturno">
-                                <div class="saturno"><img src="imagens/planetas/saturn.png" width="80px" height="80px"></div>
-                            </div>
-                            <!--Urano-->
-                            <div class="orbita-urano">
-                                <div class="urano"><img src="imagens/planetas/uranus.png" width="62px" height="62px"></div>
-                            </div>
-                            <!--Netuno-->
-                            <div class="orbita-netuno">
-                                <div class="netuno"><img src="imagens/planetas/neptune.png" onclick="info('infonetuno')" width="64px" height="64px"></div>
-                            </div>
+                        <div class="sol"><img src="imagens/planetas/sun.png" onclick="info('infosol')" width="100px" height="100px"></div>
+                        <!--Mercúrio-->
+                        <div class="mercurio"><img src="imagens/planetas/mercury.png" onclick="info('infomercurio')" width="35px" height="35px"></div>
+                        <!--Vênus-->
+                        <div class="venus"><img src="imagens/planetas/venus.png" onclick="info('infovenus')" width="45px" height="45px"></div>
+                        <!--Terra-->
+                        <div class="terra"><img src="imagens/planetas/earth.png" onclick="info('infoterra')" width="50px" heigth="50px">
+                            <!--Lua-->
+                            <div class="lua"><img src="imagens/planetas/luas/moon.png" onclick="info('infolua')" width="30px" height="30px"></div>
                         </div>
-                    </div>
+                        <!--Marte-->
+                        <div class="marte"><img src="imagens/planetas/mars.png" onclick="info('infomarte')" width="40px" height="40px"></div>
+                        <!--Júpiter-->
+                        <div class="jupiter"><img src="imagens/planetas/jupiter.png" onclick="info('infojupiter')" width="90px" height="90px"></div>
+                        <!--Saturno-->
+                        <div class="saturno"><img src="imagens/planetas/saturn.png" onclick="info('infosaturno')" width="80px" height="80px"></div>
+                        <!--Urano-->
+                        <div class="urano"><img src="imagens/planetas/uranus.png" onclick="info('infourano')" width="62px" height="62px"></div>
+                        <!--Netuno-->
+                        <div class="netuno"><img src="imagens/planetas/neptune.png" onclick="info('infonetuno')" width="64px" height="64px"></div>
                 </div>
             </div>
 
