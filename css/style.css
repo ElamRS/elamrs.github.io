@@ -106,7 +106,6 @@ a:hover {
 /* ------------------------------------------------------------------------------------------ */
 
 
-
 /* CSS da Aba do Mapa Interativo  */
 
 #mapainterativo h1 {
@@ -141,7 +140,6 @@ a:hover {
 
 #infoastros img {
     /* Manter a imagem do Box Informativo mais ao centro */
-    padding-left: 6%;
     padding-top: 8%;
     float: center;
 }
@@ -151,7 +149,10 @@ a:hover {
     position: absolute;
     top: 1%;
     right: 5%;
-    background-color: white;
+    /* Torna a borda do botão mais arredondada */
+    border-radius: 5%;
+    opacity: 0.6;
+    background-color: lightgray;
     color: rgb(0, 0, 0);
 }
 
@@ -174,18 +175,6 @@ a:hover {
     height: 100px;
     width: 100px;
 }
-
-/*
-- Mercury: 10s
-- Venus: 16s
-- Earth: 20s
-- Moon: 14s
-- Mars: 24s
-- Jupiter: 40s
-- Saturn: 60s
-- Uranus: 80s
-- Neptune: 100s
-*/
 
 .mercurio {
     position: absolute;
