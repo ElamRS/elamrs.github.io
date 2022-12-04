@@ -39,97 +39,366 @@
             <!--Div do Mapa Interativo-->
             <div class="aba" id="mapainterativo">
                 <h1>Mapa Interativo</h1>
-                <!--Testes-->
-                
                 <!--Uma div lateral que será aberta quando o usuário clicar sobre um astro-->
                 <div id="infoastros" hidden>
-                    <button onclick='document.getElementById("infoastros").hidden=true'>X</button>
+                    <button id="fechar" onclick='document.getElementById("infoastros").hidden=true'>X</button>
+                    <button id="passar" onclick="passarPagina()">></button>
                     <!--Section com as informações sobre o Sol-->
                     <section id="infosol" hidden>
-                        <h1>Sol</h1>
+                        <h2>Sol</h2>
+                        <!--Imagem do Sol | fonte: https://commons.wikimedia.org/wiki/File:The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg-->
+                        <img src="imagens/info-astros/Sol.jpg" alt="Imagem do Sol com erupção solar" width="350px" height="350px">
+                        <!--Lista desordenada com as informações a respeito do Sol-->
+                        <h3>Dados Estelares</h3>
+                        <ul>
+                            <li><strong>Classificação:</strong> Estrela Anã Amarela (G2V)</li>
+                            <li><strong>Idade:</strong> 4,57 Bilhões de anos</li>
+                            <li><strong>Tempo de Vida Restante:</strong> ~5 Bilhões de anos</li>
+                            <li><strong>Período de Rotação Equatorial:</strong> 25,05 dias</li>
+                            <li><strong>Período de Rotação nos Polos:</strong> 34,3 dias</li>
+                            <li><strong>Gravidade Superficial:</strong> 274,0 m/s<sup>2</sup></li>
+                            <li><strong>Velocidade de Escape:</strong> 617,7 km/s</li>
+                            <li><strong>Temperatura Superficial:</strong> ~5500 °C</li>
+                            <li><strong>Temperatura no Núcleo:</strong> 1,5 x 10<sup>7</sup> °C</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 1,9891 × 10<sup>30</sup> kg</li>
+                            <li><strong>Diâmetro:</strong> 1,392 × 10<sup>9</sup> m</li>
+                            <li><strong>Área da superfície:</strong> 6,0877 × 10<sup>12</sup> km<sup>2</sup></li>
+                            <li><strong>Volume:</strong> 1,412 × 10<sup>18</sup> km3</li>
+                            <li><strong>Quantidade de Planetas:</strong> 8 planetas</li>
+                            <li><strong>Densidade Média:</strong> 1,408 × 10<sup>3</sup> kg/m<sup>3</sup></li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong>Distância do Centro da Galáxia:</strong> 26.000 anos-luz</li>
+                            <li><strong>Duração da órbita galáctica:</strong> 225-250 milhões de anos</li>
+                            <li><strong>Velocidade Orbital ao redor da Galáxia:</strong> 2,20 x 10<sup>5</sup>m/s</li>
+                        </ul>
                     </section>
                     <!--Section com as informações sobre Mercúrio-->
                     <section id="infomercurio" hidden>
-                        <h1>Mercúrio</h1>
+                        <h2>Mercúrio</h2>
+                      <!--Imagem de Mercúrio | fonte: https://commons.wikimedia.org/wiki/File:Mercury_in_true_color.jpg-->
+                        <img src="imagens/info-astros/Mercurio.jpg" alt="Imagem em cores reais de Mercúrio" width="350px" height="350px">
+                        <!--Lista desordenada com as informações a respeito de Mercúrio | fonte: https://pt.wikipedia.org/wiki/Merc%C3%BArio_(planeta)-->
+                        <h3>Dados Planetários</h3>
+	                    <ul>
+	                        <li><strong>Classificação:</strong> Planeta Rochoso</li>
+                            <li><strong>Duração do dia:</strong> 58d 15h 30m</li>
+                            <li><strong>Gravidade Superficial</strong> 3,7 m/s<sup>2</sup></li>
+                            <li><strong>Velocidade de Escape:</strong> 4,25 km/s</li>
+                            <li><strong>Temperatura Média:</strong> 166,85 ºC</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 3,3011×10<sup>23</sup> kg</li>
+                            <li><strong>Diâmetro:</strong> 4 879,4 km</li>
+                            <li><strong>Área da superfície:</strong> 7,48×10<sup>7</sup> km²</li>
+                            <li><strong>Volume:</strong> 6,083×10<sup>10</sup> km³</li>
+                            <li><strong>Possuí anéis:</strong> Não</li>
+                            <li><strong>Quantidade de Luas:</strong> Nenhuma</li>
+                            <li><strong>Densidade Média:</strong> 5,427 g/cm³</li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong>Distância Máxima do Sol (Afélio):</strong>69.816.900 km</li>
+	                        <li><strong>Distância Mínima do Sol (periélio):</strong>46.001.200 km</li>
+                            <li><strong>Duração da órbita:</strong> 87,969 dias</li>
+                            <li><strong>Inclinação Axial:</strong> 0,01º</li>
+                        </ul>
                     </section>
                     <!--Section com as informações sobre Vênus-->
                     <section id="infovenus" hidden>
                         <h2>Vênus</h2>
+                        <!--Imagem de Vênus | fonte: https://commons.wikimedia.org/wiki/File:PIA23791-Venus-RealAndEnhancedContrastViews-20200608_(cropped).jpg-->
+                        <img src="imagens/info-astros/Venus.jpg" alt="Imagem em cores reais de Vênus" width="350px" height="350px">
+                        <!--Lista desordenada com as informações a respeito de Vênus-->
+                        <h3>Dados Planetários</h3>
+                        <ul>
+                            <li><strong>Classificação:</strong> Planeta Rochoso</li>
+                            <li><strong>Duração do dia:</strong> 116d 18h</li>
+                            <li><strong>Gravidade Superficial:</strong> 8,87 m/s<sup>2</sup></li>
+                            <li><strong>Velocidade de Escape:</strong> 10,36 km/s</li>
+                            <li><strong>Temperatura Média:</strong> 461 ºC</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 4,8685 × 10<sup>24</sup> kg</li>
+                            <li><strong>Diâmetro:</strong> 12 103,6 km</li>
+                            <li><strong>Área da superfície:</strong> 4,60 × 10<sup>8</sup> km²</li>
+                            <li><strong>Volume:</strong> 92,843 × 10<sup>10</sup> km³</li>
+                            <li><strong>Possuí anéis:</strong> Não</li>
+                            <li><strong>Quantidade de Luas:</strong> Nenhuma</li>
+                            <li><strong>Densidade Média:</strong> 5,243 g/cm³</li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong>Distância Máxima do Sol (afélio):</strong> 108.942.000 km </li>
+                            <li><strong>Distância Mínima do Sol (periélio):</strong> 107.476.000 km </li>
+                            <li><strong>Duração da órbita:</strong> 224,7 dias</li>
+                            <li><strong>Velocidade Orbital:</strong> 35,02 km/s</li>
+                            <li><strong>Inclinação Axial:</strong> 177,36º</li>
+                        </ul>
                     </section>
                     <!--Section com as informações sobre a Terra-->
                     <section id="infoterra" hidden>
                         <h2>Terra</h2>
+                        <!--Imagem da Terra | -->
+                        <img src="imagens/info-astros/Terra.png" alt="Imagem Real da Terra vista do Espaço" width="350px" height="350px">
+                        <!--Lista desordenada com as informações a respeito da Terra-->
+                        <h3>Dados Planetários</h3>
+                        <ul>
+                            <li><strong>Classificação:</strong>Planeta Rochoso</li>
+                            <li><strong>Duração do dia:</strong>23h 56m 4s</li>
+                            <li><strong>Gravidade Superficial</strong> 9,780327 m/s² (0,99732 g)</li>
+                            <li><strong>Velocidade de Escape:</strong> 11,186 km/s</li>
+                            <li><strong>Temperatura Média:</strong> 14ºC</li>
+                            <li><strong>Temperatura Mínima:</strong> -93,2ºC</li>
+                            <li><strong>Temperatura Máxima:</strong> 57,8ºC</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 5,9736 × 10<sup>24</sup> kg (~6 x 10<sup>24</sup> kg)</li>
+                            <li><strong>Diâmetro:</strong> 12 756,2 km</li>
+                            <li><strong>Área da superfície:</strong> 510.072.000 km²</li>
+                            <li><strong>Volume:</strong> 1,08321 × 10<sup>12</sup> km³</li>
+                            <li><strong>Possuí anéis:</strong> Não</li>
+                            <li><strong>Quantidade de Luas:</strong> 1</li>
+                            <li><strong>Densidade Média:</strong> 5,515 g/cm³</li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong>Distância Máxima do Sol (afélio):</strong> 152.098.232 km</li>
+                            <li><strong>Distância Mínima do Sol (periélio):</strong> 147.098.290 km</li>
+                            <li><strong>Velocidade Orbital:</strong> 29,78 km/s (107.200 km/h)</li>
+                            <li><strong>Duração da órbita:</strong> 365,256 dias</li>
+                            <li><strong>Inclinação Axial:</strong> 23°26'21"</li>
+                        </ul>
                     </section>
                     <!--Section com as informações sobre a Lua-->
                     <section id="infolua" hidden>
                         <h2>Lua</h2>
-
+                        <!--Imagem da Lua | fonte: https://commons.wikimedia.org/wiki/File:FullMoon2020.tif-->
+                        <img src="imagens/info-astros/Lua.jpg" alt="Imagem da Lua em alta resolução" width="350px" height="350px">
+                        <!--Lista desordenada com as informações a respeito da Lua-->
+                        <h3>Dados Lunares</h3>
+                        <ul>
+                            <li><strong>Classificação:</strong> Satélite Natural</li>
+                            <li><strong>Duração do mês sideral:</strong> 27d 7h 43m 11.6s</li>
+                            <li><strong>Duração do mês sinódico:</strong> 29d 12h 44m 2.9s</li>
+                            <li><strong>Gravidade Superficial</strong> 1,62 m/s²</li>
+                            <li><strong>Velocidade de Escape:</strong> 2,38 km/s</li>
+                            <li><strong>Temperatura Média:</strong> -53,1ºC</li>
+                            <li><strong>Temperatura Mínima:</strong> -173,1ºC</li>
+                            <li><strong>Temperatura Máximo:</strong> 116,9ºC</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 7,349 x 10<sup>22</sup> kg</li>
+                            <li><strong>Diâmetro:</strong> 3474,8 km</li>
+                            <li><strong>Área da superfície:</strong> 3,793 x 10<sup>7</sup> km²</li>
+                            <li><strong>Volume:</strong> 2,1958 × 10<sup>10</sup> km³</li>
+                            <li><strong>Densidade Média:</strong> 3,34 g/cm³</li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong></strong></li>
+                            <li><strong>Duração da órbita ao Redor da Terra:</strong> 27,321582 d</li>
+                            <li><strong>Velocidade Orbital:</strong> 1,022 km/s</li>
+                        </ul>
                     </section>
                     <!--Section com as informações sobre Marte-->
                     <section id="infomarte" hidden>
-                        <h1>Marte</h1>
-
+                        <h2>Marte</h2>
+                        <!--Imagem de Marte | fonte: https://commons.wikimedia.org/wiki/File:Mars_Valles_Marineris_EDIT.jpg-->
+                        <img src="imagens/info-astros/Marte.jpg" alt="Mosaico de Marte feito pela sonda Viking 1" width="350px" height="350px">
+                        <!--Lista desordenada com as informações a respeito de Marte-->
+                        <h3>Dados Planetários</h3>
+                        <ul>
+                            <li><strong>Classificação:</strong> Planeta Rochoso</li>
+                            <li><strong>Duração do dia:</strong> 1d 0h 37m</li>
+                            <li><strong>Gravidade Superficial</strong> 3,711 m/s²</li>
+                            <li><strong>Velocidade de Escape:</strong> 5,03 km/s</li>
+                            <li><strong>Temperatura Média:</strong> −63ºC</li>
+                            <li><strong>Temperatura Mínima:</strong> −143ºC</li>
+                            <li><strong>Temperatura Máxima:</strong> 35ºC</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 6,4174 × 10<sup>23</sup> kg</li>
+                            <li><strong>Diâmetro:</strong> 6792,4 km</li>
+                            <li><strong>Área da superfície:</strong> 144.798.500 km²</li>
+                            <li><strong>Volume:</strong> 1,6318 × 10<sup>11</sup> km³</li>
+                            <li><strong>Possuí anéis:</strong> Não</li>
+                            <li><strong>Quantidade de Luas:</strong> 2</li>
+                            <li><strong>Densidade Média:</strong> 3,933 g/cm³</li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong>Distância Máxima do Sol (afélio):</strong> 249.209.300 km</li>
+                            <li><strong>Distância Mínima do Sol (periélio):</strong> 206.669.000 km</li>
+                            <li><strong>Duração da órbita:</strong> 686,971 dias</li>
+                            <li><strong>Velocidade Orbital:</strong> 24,077 km/s</li>
+                            <li><strong>Inclinação Axial:</strong> 25º</li>
+                        </ul>
                     </section>
                     <!--Section com as informações sobre Júpiter-->
                     <section id="infojupiter" hidden>
-                        <h1>Júpiter</h1>
-
+                        <h2>Júpiter</h2>
+                        <!--Imagem de Júpiter | fonte: https://www.nasa.gov/mission_pages/juno/images/index.html-->
+                        <img src="imagens/info-astros/Jupiter.jpg" alt="Imagem do Polo Sul de Júpiter feita pela sonda Juno" width="350px" height="350px">
+                        <!--Lista desordenada com as informações a respeito de Júpiter-->
+                        <h3>Dados Planetários</h3>
+                        <ul>
+                            <li><strong>Classificação:</strong> Gigante Gasoso</li>
+                            <li><strong>Duração do dia:</strong> 9h 56m</li>
+                            <li><strong>Gravidade Superficial</strong> 24,79 m/s² (2,528 g)</li>
+                            <li><strong>Velocidade de Escape:</strong> 59,5 km/s</li>
+                            <li><strong>Temperatura Média:</strong> -108ºC</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 1,8986 × 1027 kg</li>
+                            <li><strong>Diâmetro:</strong> 142.984 km</li>
+                            <li><strong>Área da superfície:</strong> 6,21796 × 10<sup>10</sup> km²</li>
+                            <li><strong>Volume:</strong> 1,43128 × 10<sup>15</sup> km³</li>
+                            <li><strong>Possuí anéis:</strong> Sim</li>
+                            <li><strong>Quantidade de Luas:</strong> 79</li>
+                            <li><strong>Densidade Média:</strong> 1,326 g/cm³</li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong>Distância Máxima do Sol (afélio):</strong> 816.520.800 km</li>
+                            <li><strong>Distância Mínima do Sol (periélio):</strong> 740.573.600 km</li>
+                            <li><strong>Duração da órbita:</strong> 11,86 anos</li>
+                            <li><strong>Velocidade Orbital:</strong> 13,07 km/s</li>
+                            <li><strong>Inclinação Axial:</strong> 3,13°</li>
+                        </ul>
                     </section>
                     <!--Section com as informações sobre Saturno-->
                     <section id="infosaturno" hidden>
-                        <h1>Saturno</h1>
-
+                        <h2>Saturno</h2>
+                        <!--Imagem de Saturno -->
+                        <img src="imagens/info-astros/Saturno.png" alt="Saturno Visto pela sonda Cassini" width="500px" height="270px">
+                        <!--Lista desordenada com as informações a respeito de Saturno-->
+                        <h3>Dados Planetários</h3>
+                        <ul>
+                            <li><strong>Classificação:</strong> Gigante Gasoso</li>
+                            <li><strong>Duração do dia:</strong> 10h 34m</li>
+                            <li><strong>Gravidade Superficial</strong> 10,44 m/s² (1,065 g)</li>
+                            <li><strong>Velocidade de Escape:</strong> 35,5 km/s</li>
+                            <li><strong>Temperatura Média:</strong> -139 ºC</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 5,6846 × 10<sup>26</sup> kg</li>
+                            <li><strong>Diâmetro:</strong> 120 536 km</li>
+                            <li><strong>Área da superfície:</strong> 4,27 × 10<sup>10</sup> km²</li>
+                            <li><strong>Volume:</strong> 8,2713 × 10<sup>14</sup> km³</li>
+                            <li><strong>Quantidade de Luas:</strong> 82</li>
+                            <li><strong>Densidade Média:</strong> 0,687 g/cm³</li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong>Distância Máxima do Sol (afélio):</strong> 1.513.325.783 km</li>
+                            <li><strong>Distância Mínima do Sol (periélio):</strong> 1.353.572.956 km</li>
+                            <li><strong>Duração da órbita:</strong> 29,458 anos</li>
+                            <li><strong>Velocidade Orbital:</strong> 9,69 km/s </li>
+                            <li><strong>Inclinação Axial:</strong> 26,73°</li>
+                        </ul>
                     </section>
                     <!--Section com as informações sobre Urano-->
                     <section id="infourano" hidden>
-                        <h1>Urano</h1>
-
+                        <h2>Urano</h2>
+                        <!--Imagem de Urano | fonte: https://commons.wikimedia.org/wiki/File:Uranus_as_seen_by_NASA%27s_Voyager_2_(remastered)_-_JPEG_converted.jpg-->
+                        <img src="imagens/info-astros/Urano.jpg" alt="Imagem de Urano tirada pela Voyager 2" width="350px" height="350px">
+                        <!--Lista desordenada com as informações a respeito de Urano-->
+                        <h3>Dados Planetários</h3>
+                        <ul>
+                            <li><strong>Classificação:</strong> Gigante Gelado</li>
+                            <li><strong>Duração do dia:</strong> 17h 14m</li>
+                            <li><strong>Gravidade Superficial</strong> 8,69 m/s² (0,886 g)</li>
+                            <li><strong>Velocidade de Escape:</strong> 21,3 km/s</li>
+                            <li><strong>Temperatura Média:</strong> -220 ºC</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 8,6810 × 10<sup>25</sup></li>
+                            <li><strong>Diâmetro:</strong> 51.118 km</li>
+                            <li><strong>Área da superfície:</strong> 8,115 ×  10<sup>9</sup> km²</li>
+                            <li><strong>Volume:</strong> 6,833 × 10<sup>13</sup> km³</li>
+                            <li><strong>Possuí anéis:</strong> Sim</li>
+                            <li><strong>Quantidade de Luas:</strong> 27</li>
+                            <li><strong>Densidade Média:</strong> 1,27 g/cm³</li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong>Distância Máxima do Sol (afélio):</strong> 3.004.419.704 km</li>
+                            <li><strong>Distância Mínima do Sol (periélio):</strong> 2.748.938.461 km</li>
+                            <li><strong>Duração da órbita:</strong> 84,32 anos</li>
+                            <li><strong>Velocidade Orbital:</strong> 6,81 km/s</li>
+                            <li><strong>Inclinação Axial:</strong> 97,77°</li>
+                        </ul>
                     </section>
                     <!--Section com as informações sobre Netuno-->
                     <section id="infonetuno" hidden>
                         <h2>Netuno</h2>
+                        <!--Imagem de Netuno | fonte: https://commons.wikimedia.org/wiki/File:Neptune_-_Voyager_2_(29347980845)_flatten_crop.jpg-->
                         <img src="imagens/info-astros/Netuno.jpg" alt="netuno_voyager2" width="350px" height="350px">
+                        <h3>Dados Planetários</h3>
                         <ul>
-                            <li><strong>Diâmetro equatorial:</strong> 49 528 km</li>
-                            <li><strong>Área da superfície:</strong> 7,6183<sup>×</sup>109 km²</li>
-                            <li><strong>Volume:</strong> 6,254<sup>×</sup>1013 km³</li>
-                            <li><strong>Massa:</strong> 1,0243<sup>×</sup>1026 kg</li>
-                            <li><strong>Densidade média:</strong> 1,638 g/cm³</li>
-                            <li><strong>Gravidade equatorial:</strong> 11,15 m/s² 1,14 g</li>
-                            <li><strong>Período de rotação:</strong> 0,6713 dia (16h 6min 36s)</li>
-                            <li><strong>Velocidade de escape:</strong> 23,5 km/s</li>
-                            <li><strong>Inclinação axial:</strong> 28,32°</li>
-                            <li><strong>Albedo:</strong> 0,290 (Bond)  0,41 (geom.)</li>
-                            <li><strong>Temperatura média:</strong> −223,15 ºC</li>
-                            <li><strong>Mínima:</strong> −235 ºC</li>
-                            <li><strong>Magnitude aparente:</strong> 8,02 a 7,78</li>
+                            <li><strong>Classificação:</strong> Gigante Gelado</li>
+                            <li><strong>Duração do dia:</strong> 16h 6min 36s</li>
+                            <li><strong>Gravidade Superficial</strong> 11,15 m/s² (1,14 g)</li>
+                            <li><strong>Velocidade de Escape:</strong> 23,5 km/s</li>
+                            <li><strong>Temperatura Média:</strong> −223,15 ºC</li>
+                        </ul>
+                        <h3>Aspectos Físicos</h3>
+                        <ul>
+                            <li><strong>Massa:</strong> 1,0243 × 10<sup>26</sup> kg</li>
+                            <li><strong>Diâmetro:</strong> 49 528 km</li>
+                            <li><strong>Área da superfície:</strong> 7,6183 × 10<sup>9</sup> km²</li>
+                            <li><strong>Volume:</strong> 6,254 × 10<sup>13</sup> km³</li>
+                            <li><strong>Possuí anéis:</strong> Sim</li>
+                            <li><strong>Quantidade de Luas:</strong> 14</li>
+                            <li><strong>Densidade Média:</strong> 1,638 g/cm³</li>
+                        </ul>
+                        <h3>Dados Orbitais</h3>
+                        <ul>
+                            <li><strong>Distância Máxima do Sol (Afélio):</strong> 4.553.946.490 km</li>
+                            <li><strong>Distância Mínima do Sol (Periélio):</strong> 4.503.443.661 km</li>
+                            <li><strong>Duração da órbita:</strong> 164,79 anos</li>
+                            <li><strong>Velocidade Orbital:</strong> 5,43 km/s</li>
+                            <li><strong>Inclinação Axial:</strong> 28,32°</li>
                         </ul>
                     </section>
                 </div>
-
-                <div id="divmapa">
-                    <div class="sistema_solar">
-                        <!--Sol-->
-                        <div class="sol"><img src="imagens/planetas/sun.png" onclick="info('infosol')" width="100px" height="100px"></div>
-                        <!--Mercúrio-->
-                        <div class="mercurio"><img src="imagens/planetas/mercury.png" onclick="info('infomercurio')" width="35px" height="35px"></div>
-                        <!--Vênus-->
-                        <div class="venus"><img src="imagens/planetas/venus.png" onclick="info('infovenus')" width="45px" height="45px"></div>
-                        <!--Terra-->
-                        <div class="terra"><img src="imagens/planetas/earth.png" onclick="info('infoterra')" width="50px" heigth="50px">
-                            <!--Lua-->
-                            <div class="lua"><img src="imagens/planetas/luas/moon.png" onclick="info('infolua')" width="30px" height="30px"></div>
-                        </div>
-                        <!--Marte-->
-                        <div class="marte"><img src="imagens/planetas/mars.png" onclick="info('infomarte')" width="40px" height="40px"></div>
-                        <!--Júpiter-->
-                        <div class="jupiter"><img src="imagens/planetas/jupiter.png" onclick="info('infojupiter')" width="90px" height="90px"></div>
-                        <!--Saturno-->
-                        <div class="saturno"><img src="imagens/planetas/saturn.png" onclick="info('infosaturno')" width="80px" height="80px"></div>
-                        <!--Urano-->
-                        <div class="urano"><img src="imagens/planetas/uranus.png" onclick="info('infourano')" width="62px" height="62px"></div>
-                        <!--Netuno-->
-                        <div class="netuno"><img src="imagens/planetas/neptune.png" onclick="info('infonetuno')" width="64px" height="64px"></div>
+                
+                <!-- Div com os planetas -->
+                <div class="sistema_solar">
+                    <!--Sol-->
+                    <div class="sol"><img src="imagens/planetas/sun.png" onclick="info('infosol')" width="100px" height="100px"></div>
+                    <!--Mercúrio-->
+                    <div class="mercurio"><img src="imagens/planetas/mercury.png" onclick="info('infomercurio')" width="35px" height="35px"></div>
+                    <!--Vênus-->
+                    <div class="venus"><img src="imagens/planetas/venus.png" onclick="info('infovenus')" width="45px" height="45px"></div>
+                    <!--Terra-->
+                    <div class="terra"><img src="imagens/planetas/earth.png" onclick="info('infoterra')" width="50px" heigth="50px">
+                        <!--Lua-->
+                        <div class="lua"><img src="imagens/planetas/luas/moon.png" onclick="info('infolua')" width="30px" height="30px"></div>
+                    </div>
+                    <!--Marte-->
+                    <div class="marte"><img src="imagens/planetas/mars.png" onclick="info('infomarte')" width="40px" height="40px"></div>
+                    <!--Júpiter-->
+                    <div class="jupiter"><img src="imagens/planetas/jupiter.png" onclick="info('infojupiter')" width="90px" height="90px"></div>
+                    <!--Saturno-->
+                    <div class="saturno"><img src="imagens/planetas/saturn.png" onclick="info('infosaturno')" width="80px" height="80px"></div>
+                    <!--Urano-->
+                    <div class="urano"><img src="imagens/planetas/uranus.png" onclick="info('infourano')" width="62px" height="62px"></div>
+                    <!--Netuno-->
+                    <div class="netuno"><img src="imagens/planetas/neptune.png" onclick="info('infonetuno')" width="64px" height="64px"></div>
                 </div>
             </div>
 
@@ -159,7 +428,6 @@
                             <a href="https://olhardigital.com.br/2022/08/22/ciencia-e-espaco/telescopio-espacial-james-webb-registra-imagens-incriveis-de-jupiter-veja/" target="_blank">
                             <p>O Telescópio Espacial James Webb registrou imagens incríveis de Júpiter, o maior planeta do Sistema Solar. Em algumas fotografias...</p></a>
                         </section>
-                        
 
                         <!--Impacto Meteorito-->
                         <section class="news">
