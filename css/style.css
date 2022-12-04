@@ -135,15 +135,30 @@ a:hover {
     z-index: 2;
 }
 
+#infoastros li strong {
+    color: gold;
+}
+
+#infoastros img {
+    /* Manter a imagem do Box Informativo mais ao centro */
+    padding-left: 6%;
+    padding-top: 8%;
+    float: center;
+}
+
 #infoastros button {
     /* Posiciona o botão no canto superior direito */
     position: absolute;
     top: 1%;
     right: 5%;
+    background-color: white;
+    color: rgb(0, 0, 0);
 }
 
 #infoastros h2 {
     color: gold;
+    position: absolute;
+    padding-left: 5%;
 }
 
 
@@ -160,9 +175,21 @@ a:hover {
     width: 100px;
 }
 
+/*
+- Mercury: 10s
+- Venus: 16s
+- Earth: 20s
+- Moon: 14s
+- Mars: 24s
+- Jupiter: 40s
+- Saturn: 60s
+- Uranus: 80s
+- Neptune: 100s
+*/
+
 .mercurio {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
     background-color: #d35400;
     height: 35px;
@@ -171,11 +198,16 @@ a:hover {
     margin-top: -10px;
     border-radius: 50%;
     box-shadow: 0 0 40px #684d3a;
+    /* Detalhes da Animação*/
+    animation: orbitamercurio 10s linear infinite;
+    transform: rotate(-50%, -50%);
+    /* O ponto ao redor do qual o planeta irá rodar */
+    transform-origin: 60px 60px;
 }
 
 .venus {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
     background-color: #f39c12;
     height: 45px;
@@ -184,11 +216,16 @@ a:hover {
     margin-top: -20px;
     border-radius: 50%;
     box-shadow: 0 0 40px #f39c12;
+    /* Detalhes da Animação*/
+    animation: orbitavenus 16s linear infinite;
+    transform: rotate(-50%, -50%);
+    /* O ponto ao redor do qual o planeta irá rodar */
+    transform-origin: 50px 50px;
 }
 
 .terra {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
     background-color: #3779a5;
     height: 50px;
@@ -197,24 +234,34 @@ a:hover {
     margin-top: -25px;
     border-radius: 50%;
     box-shadow: 0 0 40px rgb(152, 152, 245);
+    /* Detalhes da Animação*/
+    animation: orbitaterra 20s linear infinite;
+    transform: rotate(-50%, -50%);
+    /* O ponto ao redor do qual o planeta irá rodar */
+    transform-origin: 70px 70px;
 }
 
 .lua {
     position: absolute;
-    top: 15%;
+    top: 50%;
     left: 50%;
     background-color: #7f8c8d;
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     margin-left: -30px;
     margin-top: -30px;
     border-radius: 50%;
     box-shadow: 0 0 20px #7f8c8d;
+    /* Detalhes da Animação*/
+    animation:  orbitalua 14s linear infinite;
+    transform: rotate(-50%, -50%);
+    /* O ponto ao redor do qual o planeta irá rodar */
+    transform-origin: 25px 25px;
 }
 
 .marte {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
     background-color: #d65243;
     height: 40px;
@@ -223,11 +270,16 @@ a:hover {
     margin-top: -10px;
     border-radius: 50%;
     box-shadow: 0 0 40px #e74e3c;
+    /* Detalhes da Animação*/
+    animation: orbitamarte 24s linear infinite;
+    transform: rotate(-50%, -50%);
+    /* O ponto ao redor do qual o planeta irá rodar */
+    transform-origin: 70px 70px;
 }
 
 .jupiter {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
     background-color: black;
     height: 90px;
@@ -236,11 +288,16 @@ a:hover {
     margin-top: -30px;
     border-radius: 50%;
     box-shadow: 0 0 20px #e7d1a7;
+    /* Detalhes da Animação*/
+    animation: orbitajupiter 40s linear infinite;
+    transform: rotate(-50%, -50%);
+    /* O ponto ao redor do qual o planeta irá rodar */
+    transform-origin: 80px 80px;
 }
 
 .saturno {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
     background-color: black;
     height: 80px;
@@ -248,11 +305,16 @@ a:hover {
     margin-left: -20px;
     margin-top: -20px;
     border-radius: 50%;
+    /* Detalhes da Animação*/
+    animation: orbitasaturno 60s linear infinite;
+    transform: rotate(-50%, -50%);
+    /* O ponto ao redor do qual o planeta irá rodar */
+    transform-origin: 80px 80px;
 }
 
 .urano {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
     background-color: black;
     height: 54px;
@@ -260,11 +322,16 @@ a:hover {
     margin-left: -25px;
     margin-top: -25px;
     border-radius: 50%;
+    /* Detalhes da Animação*/
+    animation: orbitaurano 80s linear infinite;
+    transform: rotate(-50%, -50%);
+    /* O ponto ao redor do qual o planeta irá rodar */
+    transform-origin: 80px 80px;
 }
 
 .netuno {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
     background-color: #34395e;
     height: 56px;
@@ -273,144 +340,97 @@ a:hover {
     margin-top: -25px;
     border-radius: 50%;
     box-shadow: 0 0 40px #3498bd;
+    /* Detalhes da Animação*/
+    animation: orbitanetuno 100s linear infinite;
+    transform: rotate(-50%, -50%);
+    /* O ponto ao redor do qual o planeta irá rodar */
+    transform-origin: 80px 80px;
 }
 
-.orbita-mercurio {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 200px;
-    margin-top: -100px;
-    margin-left: -100px;
-    border-style: dotted;
-    border-color: rgb(88, 88, 88);
-    border-radius: 50%;
-    animation: spin 10s linear infinite;
-}
+/* Configurações das Orbitas */
 
-.orbita-venus {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 300px;
-    margin-top: -150px;
-    margin-left: -150px;
-    border-style: dotted;
-    border-color: rgb(88, 88, 88);
-    border-radius: 50%;
-    animation: spin 16s linear infinite;
-}
-
-.orbita-terra {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 450px;
-    height: 450px;
-    margin-top: -225px;
-    margin-left: -225px;
-    border-width: 2px;
-    border-style: dotted;
-    border-color: rgb(88, 88, 88);
-    border-radius: 50%;
-    animation: spin 20s linear infinite;
-}
-
-.orbita-lua {
-    position: absolute;
-    top: 44.5%;
-    left: 94.5%;
-    width: 50px;
-    height: 50px;
-    margin-top: -225px;
-    margin-left: -225px;
-    border-radius: 50%;
-    animation: spin 14s linear infinite;
-}
-
-.orbita-marte {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 600px;
-    height: 600px;
-    margin-top: -300px;
-    margin-left: -300px;
-    border-width: 2px;
-    border-style: dotted;
-    border-color: rgb(88, 88, 88);
-    border-radius: 50%;
-    animation: spin 24s linear infinite;
-}
-
-.orbita-jupiter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 800px;
-    height: 800px;
-    margin-top: -400px;
-    margin-left: -400px;
-    border-width: 2px;
-    border-style: dotted;
-    border-color: rgb(88, 88, 88);
-    border-radius: 50%;
-    animation: spin 40s linear infinite;
-}
-
-.orbita-saturno {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 950px;
-    height: 950px;
-    margin-top: -475px;
-    margin-left: -475px;
-    border-width: 2px;
-    border-style: dotted;
-    border-color: rgb(88, 88, 88);
-    border-radius: 50%;
-    animation: spin 60s linear infinite;
-}
-
-.orbita-urano {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1050px;
-    height: 1050px;
-    margin-top: -525px;
-    margin-left: -525px;
-    border-width: 2px;
-    border-style: dotted;
-    border-color: rgb(88, 88, 88);
-    border-radius: 50%;
-    animation: spin 80s linear infinite;
-}
-
-.orbita-netuno {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1200px;
-    height: 1200px;
-    margin-top: -600px;
-    margin-left: -600px;
-    border-width: 2px;
-    border-style: dotted;
-    border-color: rgb(88, 88, 88);
-    border-radius: 50%;
-    animation: spin 100s linear infinite;
-}
-
-/* Animação da rotação dos planetas */
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
+/* Animação da órbita de Mercúrio*/
+@keyframes orbitamercurio {
+    from {
+        transform: rotate(0deg) translateX(140px)
+    }
+    to {
+        transform: rotate(360deg) translateX(140px)
     }
 }
+/* Animação da órbita de Vênus */
+@keyframes orbitavenus {
+    from {
+        transform: rotate(0deg) translateX(220px)
+    }
+    to {
+        transform: rotate(360deg) translateX(220px)
+    }
+}
+/* Animação da órbita da Terra */
+@keyframes orbitaterra {
+    from {
+        transform: rotate(0deg) translateX(300px)
+    }
+    to {
+        transform: rotate(360deg) translateX(300px)
+    }
+}
+/* Animação da órbita da Lua */
+@keyframes orbitalua {
+    from {
+        transform: rotate(0deg) translateX(55px);
+    }
+    to {
+        transform: rotate(360deg) translateX(55px)
+    }
+}
+/* Animação da órbita de Marte */
+@keyframes orbitamarte {
+    from {
+        transform: rotate(0deg) translateX(390px)
+    }
+    to {
+        transform: rotate(360deg) translateX(390px)
+    }
+}
+/* Animação da órbita de Júpiter*/
+@keyframes orbitajupiter {
+    from {
+        transform: rotate(0deg) translateX(460px)
+    }
+    to {
+        transform: rotate(360deg) translateX(460px)
+    }
+}
+/* Animação da órbita de Saturno */
+@keyframes orbitasaturno {
+    from {
+        transform: rotate(0deg) translateX(580px)
+    }
+    to {
+        transform: rotate(360deg) translateX(580px)
+    }
+}
+/* Animação da órbita de Urano */
+@keyframes orbitaurano {
+    from {
+        transform: rotate(0deg) translateX(670px)
+    }
+    to {
+        transform: rotate(360deg) translateX(670px)
+    }
+}
+/* Animação da órbita de Netuno */
+@keyframes orbitanetuno {
+    from {
+        transform: rotate(0deg) translateX(770px)
+    }
+    to {
+        transform: rotate(360deg) translateX(770px)
+    }
+}
+
 
 /* ---------------------------------------------------------------------------------------------- */
 
