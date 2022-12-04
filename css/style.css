@@ -127,15 +127,15 @@ a:hover {
     top: 23%;
     right: 2%;
     background-color: black;
-    border: 1px solid white;
+    border: 3px solid white;
     padding: 0.5%;
-    border-radius: 2%;
+    border-radius: 6px;
     /* Designa um valor no eixo horizontal maior do que o do mapa, para que os planetas não passem por cima do Box */
     z-index: 2;
 }
 
 #infoastros li strong {
-    color: gold;
+    color: rgb(119, 119, 119);
 }
 
 #infoastros img {
@@ -144,22 +144,32 @@ a:hover {
     float: center;
 }
 
-#infoastros button {
+#infoastros #fechar {
     /* Posiciona o botão no canto superior direito */
     position: absolute;
     top: 1%;
     right: 5%;
     /* Torna a borda do botão mais arredondada */
     border-radius: 5%;
-    opacity: 0.6;
     background-color: lightgray;
     color: rgb(0, 0, 0);
 }
 
-#infoastros h2 {
-    color: gold;
+#infoastros #passar {
+    /* Posiciona o botão no centro do lado direito */
     position: absolute;
+    top: 50%;
+    right: 5%;
+    /* Torna a borda do botão mais arredondada */
+    border-radius: 5%;
+    background-color: lightgray;
+    color: rgb(0, 0, 0);
+}
+
+#infoastros h2 h3 {
+    color: rgb(201, 201, 201);
     padding-left: 5%;
+    position: absolute;
 }
 
 
