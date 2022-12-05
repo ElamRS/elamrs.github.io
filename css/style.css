@@ -115,10 +115,9 @@ a:hover {
     z-index: 2;
 }
 
-#divmap {
-    /* Tornar o mapa interativo um dos últimos elementos na pilha horizontal*/
+#sistema_solar {
     position: absolute;
-    z-index: 1;
+    padding-top: 70%;
 }
 
 /* CSS da Div com as informações*/
@@ -126,9 +125,9 @@ a:hover {
     position: absolute;
     top: 23%;
     right: 2%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     border: 3px solid white;
-    padding: 0.5%;
+    padding: 2%;
     border-radius: 6px;
     /* Designa um valor no eixo horizontal maior do que o do mapa, para que os planetas não passem por cima do Box */
     z-index: 2;
@@ -140,8 +139,9 @@ a:hover {
 
 #infoastros img {
     /* Manter a imagem do Box Informativo mais ao centro */
-    padding-top: 8%;
-    float: center;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 #infoastros #fechar {
@@ -155,7 +155,7 @@ a:hover {
     color: rgb(0, 0, 0);
 }
 
-#infoastros #passar {
+#infoastros #passarDir {
     /* Posiciona o botão no centro do lado direito */
     position: absolute;
     top: 50%;
@@ -164,6 +164,17 @@ a:hover {
     border-radius: 5%;
     background-color: lightgray;
     color: rgb(0, 0, 0);
+}
+
+#infoastros #passarEsq {
+    /* Posiciona o botão no centro do lado esquerdo */
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    /* Torna a borda do botão mais arredondada */
+    border-radius: 5%;
+    background-color: lightgray;
+    color: black;
 }
 
 #infoastros h2 h3 {
@@ -179,11 +190,11 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: yellow;
+    background-color: rgb(255, 68, 0);
     border-radius: 50%;
     box-shadow: 0 0 100px yellow;
-    height: 100px;
-    width: 100px;
+    height: 95px;
+    width: 95px;
 }
 
 .mercurio {
