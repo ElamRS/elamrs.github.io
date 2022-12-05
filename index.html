@@ -42,11 +42,19 @@
                 <!--Uma div lateral que será aberta quando o usuário clicar sobre um astro-->
                 <div id="infoastros" hidden>
                     <button id="fechar" onclick='document.getElementById("infoastros").hidden=true'>X</button>
-                    <button id="passar" onclick="passarPagina()">></button>
+                    <button id="passarDir" onclick='passarPaginaDir()'>></button> <!--Botão para passar o Box para a direita-->
+                    <button id="passarEsq" onclick='passarPaginaEsq()' hidden><</button> <!--Botão para passar o Box para a esquerda-->
+
                     <!--Section com as informações sobre o Sol-->
                     <section id="infosol" hidden>
                         <h2>Sol</h2>
                         <!--Imagem do Sol | fonte: https://commons.wikimedia.org/wiki/File:The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg-->
+                        <img src="imagens/info-astros/Sol.jpg" alt="Imagem do Sol com erupção solar" width="350px" height="350px">
+                    </section>
+
+                    <!--Section com os dados sobre o Sol-->
+                    <section id="infosol2" hidden>
+                        <!--Imagem do Sol-->
                         <img src="imagens/info-astros/Sol.jpg" alt="Imagem do Sol com erupção solar" width="350px" height="350px">
                         <!--Lista desordenada com as informações a respeito do Sol-->
                         <h3>Dados Estelares</h3>
@@ -77,11 +85,18 @@
                             <li><strong>Velocidade Orbital ao redor da Galáxia:</strong> 2,20 x 10<sup>5</sup>m/s</li>
                         </ul>
                     </section>
+
                     <!--Section com as informações sobre Mercúrio-->
-                    <section id="infomercurio" hidden>
+                    <section id="infomercurio" hidden> 
                         <h2>Mercúrio</h2>
-                      <!--Imagem de Mercúrio | fonte: https://commons.wikimedia.org/wiki/File:Mercury_in_true_color.jpg-->
+                        <!--Imagem de Mercúrio | fonte: https://commons.wikimedia.org/wiki/File:Mercury_in_true_color.jpg-->
                         <img src="imagens/info-astros/Mercurio.jpg" alt="Imagem em cores reais de Mercúrio" width="350px" height="350px">
+                    </section>
+
+                    <!--Section 2 com os dados sobre Mercúrio-->
+                    <section id="infomercurio2" hidden>
+                        <!--Imagem de Mercúrio-->
+                        <img src="imagens/info-astros/section_2/mercurio2.jpg" alt="Imagem em cores reais de Mercúrio" width="350px" height="350px">
                         <!--Lista desordenada com as informações a respeito de Mercúrio | fonte: https://pt.wikipedia.org/wiki/Merc%C3%BArio_(planeta)-->
                         <h3>Dados Planetários</h3>
 	                    <ul>
@@ -103,17 +118,24 @@
                         </ul>
                         <h3>Dados Orbitais</h3>
                         <ul>
-                            <li><strong>Distância Máxima do Sol (Afélio):</strong>69.816.900 km</li>
-	                        <li><strong>Distância Mínima do Sol (periélio):</strong>46.001.200 km</li>
+                            <li><strong>Distância Máxima do Sol (Afélio):</strong> 69.816.900 km</li>
+	                        <li><strong>Distância Mínima do Sol (periélio):</strong> 46.001.200 km</li>
                             <li><strong>Duração da órbita:</strong> 87,969 dias</li>
                             <li><strong>Inclinação Axial:</strong> 0,01º</li>
                         </ul>
                     </section>
+
                     <!--Section com as informações sobre Vênus-->
-                    <section id="infovenus" hidden>
+                    <section id="infovenus" hidden>   
                         <h2>Vênus</h2>
                         <!--Imagem de Vênus | fonte: https://commons.wikimedia.org/wiki/File:PIA23791-Venus-RealAndEnhancedContrastViews-20200608_(cropped).jpg-->
                         <img src="imagens/info-astros/Venus.jpg" alt="Imagem em cores reais de Vênus" width="350px" height="350px">
+                    </section>
+
+                    <!--Section 2 com os dados sobre Vênus-->
+                    <section id="infovenus2" hidden>
+                        <!--Imagem de Vênus-->
+                        <img src="imagens/info-astros/section_2/venus2.jpg" alt="Imagem de radar da superfície de Vênus" width="350px" height="350px">
                         <!--Lista desordenada com as informações a respeito de Vênus-->
                         <h3>Dados Planetários</h3>
                         <ul>
@@ -142,11 +164,17 @@
                             <li><strong>Inclinação Axial:</strong> 177,36º</li>
                         </ul>
                     </section>
+
                     <!--Section com as informações sobre a Terra-->
-                    <section id="infoterra" hidden>
+                    <section id="infoterra" hidden>   
                         <h2>Terra</h2>
-                        <!--Imagem da Terra | -->
-                        <img src="imagens/info-astros/Terra.png" alt="Imagem Real da Terra vista do Espaço" width="350px" height="350px">
+                        <!--Imagem da Terra | Blue Marble (tirada no retorno da missão Apollo 17)-->
+                        <img src="imagens/info-astros/Terra.jpg" alt="Imagem Real da Terra vista do Espaço" width="350px" height="350px">
+                    </section>
+
+                    <!--Section 2 com os dados sobre a Terra-->
+                    <section id="infoterra2" hidden>
+                        <img src="imagens/info-astros/section_2/terra2.jpg" alt="Imagem Real da Terra vista do Espaço" width="350px" height="350px">
                         <!--Lista desordenada com as informações a respeito da Terra-->
                         <h3>Dados Planetários</h3>
                         <ul>
@@ -177,11 +205,18 @@
                             <li><strong>Inclinação Axial:</strong> 23°26'21"</li>
                         </ul>
                     </section>
+
                     <!--Section com as informações sobre a Lua-->
-                    <section id="infolua" hidden>
+                    <section id="infolua" hidden>   
                         <h2>Lua</h2>
                         <!--Imagem da Lua | fonte: https://commons.wikimedia.org/wiki/File:FullMoon2020.tif-->
                         <img src="imagens/info-astros/Lua.jpg" alt="Imagem da Lua em alta resolução" width="350px" height="350px">
+                    </section>
+
+                    <!--Section 2 com os dados sobre a Lua-->
+                    <section id="infolua2" hidden>
+                        <!--Imagem do Lado Escuro da Lua-->
+                        <img src="imagens/info-astros/section_2/lua2.jpg" alt="Imagem do lado escuro da Lua" width="350px" height="350px">
                         <!--Lista desordenada com as informações a respeito da Lua-->
                         <h3>Dados Lunares</h3>
                         <ul>
@@ -204,16 +239,22 @@
                         </ul>
                         <h3>Dados Orbitais</h3>
                         <ul>
-                            <li><strong></strong></li>
-                            <li><strong>Duração da órbita ao Redor da Terra:</strong> 27,321582 d</li>
+                            <li><strong>Duração da órbita ao Redor da Terra:</strong> 27,32 dias</li>
                             <li><strong>Velocidade Orbital:</strong> 1,022 km/s</li>
                         </ul>
                     </section>
+                    
                     <!--Section com as informações sobre Marte-->
-                    <section id="infomarte" hidden>
+                    <section id="infomarte" hidden>   
                         <h2>Marte</h2>
                         <!--Imagem de Marte | fonte: https://commons.wikimedia.org/wiki/File:Mars_Valles_Marineris_EDIT.jpg-->
                         <img src="imagens/info-astros/Marte.jpg" alt="Mosaico de Marte feito pela sonda Viking 1" width="350px" height="350px">
+                    </section>
+
+                    <!--Section 2 com os dados sobre Marte-->
+                    <section id="infomarte2" hidden>
+                        <!--Imagem de Marte Feita pelo Hubble-->
+                        <img src="imagens/info-astros/Section_2/marte2.jpg" alt="Imagem de Marte feita pelo Hubble" width="350px" height="350px">
                         <!--Lista desordenada com as informações a respeito de Marte-->
                         <h3>Dados Planetários</h3>
                         <ul>
@@ -244,11 +285,17 @@
                             <li><strong>Inclinação Axial:</strong> 25º</li>
                         </ul>
                     </section>
+
                     <!--Section com as informações sobre Júpiter-->
-                    <section id="infojupiter" hidden>
+                    <section id="infojupiter" hidden>   
                         <h2>Júpiter</h2>
                         <!--Imagem de Júpiter | fonte: https://www.nasa.gov/mission_pages/juno/images/index.html-->
                         <img src="imagens/info-astros/Jupiter.jpg" alt="Imagem do Polo Sul de Júpiter feita pela sonda Juno" width="350px" height="350px">
+                    </section>
+
+                    <!--Section 2 com os dados sobre Júpiter-->
+                    <section id="infojupiter2" hidden>
+                        <img src="imagens/info-astros/Section_2/jupiter2.png" alt="Imagem de Júpiter feita pelo Hubble" width="350px" height="350px">
                         <!--Lista desordenada com as informações a respeito de Júpiter-->
                         <h3>Dados Planetários</h3>
                         <ul>
@@ -277,11 +324,18 @@
                             <li><strong>Inclinação Axial:</strong> 3,13°</li>
                         </ul>
                     </section>
+
                     <!--Section com as informações sobre Saturno-->
-                    <section id="infosaturno" hidden>
+                    <section id="infosaturno" hidden>   
                         <h2>Saturno</h2>
-                        <!--Imagem de Saturno -->
+                        <!--Imagem do polo norte de Saturno feita pela sonda Cassini-->
                         <img src="imagens/info-astros/Saturno.png" alt="Saturno Visto pela sonda Cassini" width="500px" height="270px">
+                    </section>
+
+                    <!--Section 2 com os dados sobre Saturno-->
+                    <section id="infosaturno2" hidden>
+                        <!--The Day the Earth Smiled | Foto tirada pela Cassini em que o sistema Terra-Lua aparece-->
+                        <img src="imagens/info-astros/section_2/saturno2.jpg" alt="The Day the Earth Smiled" width="500px" height="270px">
                         <!--Lista desordenada com as informações a respeito de Saturno-->
                         <h3>Dados Planetários</h3>
                         <ul>
@@ -309,11 +363,18 @@
                             <li><strong>Inclinação Axial:</strong> 26,73°</li>
                         </ul>
                     </section>
+
                     <!--Section com as informações sobre Urano-->
-                    <section id="infourano" hidden>
+                    <section id="infourano" hidden>   
                         <h2>Urano</h2>
                         <!--Imagem de Urano | fonte: https://commons.wikimedia.org/wiki/File:Uranus_as_seen_by_NASA%27s_Voyager_2_(remastered)_-_JPEG_converted.jpg-->
                         <img src="imagens/info-astros/Urano.jpg" alt="Imagem de Urano tirada pela Voyager 2" width="350px" height="350px">
+                    </section>
+
+                    <!--Section 2 com os dados sobre Urano-->
+                    <section id="infourano2" hidden>
+                        <!--Imagem dos Anéis de Urano-->
+                        <img src="imagens/info-astros/Section_2/urano2.jpg" alt="Imagem de Urano tirada pelo Hubble" width="350px" height="350px">
                         <!--Lista desordenada com as informações a respeito de Urano-->
                         <h3>Dados Planetários</h3>
                         <ul>
@@ -342,11 +403,18 @@
                             <li><strong>Inclinação Axial:</strong> 97,77°</li>
                         </ul>
                     </section>
+
                     <!--Section com as informações sobre Netuno-->
-                    <section id="infonetuno" hidden>
+                    <section id="infonetuno" hidden>   
                         <h2>Netuno</h2>
                         <!--Imagem de Netuno | fonte: https://commons.wikimedia.org/wiki/File:Neptune_-_Voyager_2_(29347980845)_flatten_crop.jpg-->
                         <img src="imagens/info-astros/Netuno.jpg" alt="netuno_voyager2" width="350px" height="350px">
+                    </section>
+
+                    <!--Section com os dados sobre Netuno-->
+                    <section id="infonetuno2" hidden>
+                        <!--Imagem de Netuno tirada pelo James Webb-->
+                        <img src="imagens/info-astros/section_2/netuno2.png" alt="Netuno visto pelo James Webb" width="350px" height="350px">
                         <h3>Dados Planetários</h3>
                         <ul>
                             <li><strong>Classificação:</strong> Gigante Gelado</li>
@@ -375,7 +443,7 @@
                         </ul>
                     </section>
                 </div>
-                
+
                 <!-- Div com os planetas -->
                 <div class="sistema_solar">
                     <!--Sol-->
