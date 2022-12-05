@@ -133,6 +133,11 @@ a:hover {
     z-index: 2;
 }
 
+#infoastros p {
+    float: center;
+    text-align: left;
+}
+
 #infoastros li strong {
     color: rgb(119, 119, 119);
 }
