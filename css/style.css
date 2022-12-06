@@ -628,4 +628,5 @@ a:hover {
 }
 .btn:hover{
     border-radius: 16px;
+    color: black !important;
 }
