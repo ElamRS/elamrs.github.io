@@ -602,18 +602,7 @@ a:hover {
 
 /* CSS da página "Obrigado" */
 
-.text {
-    font-size: 45px;
-    color: white;
-    margin-bottom: 30px;
-}
-
-.paragrafo {
-    color: white;
-    margin-bottom: 50px;
-}
-
-.main {
+.main{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -621,18 +610,22 @@ a:hover {
     background: black;
     flex-direction: column;
 }
-
-.btn {
+.text{
+    font-size: 45px;
+    color: white;
+    margin-bottom: 30px;
+}
+.paragrafo{
+    color: white;
+    margin-bottom: 50px;
+}
+.btn{
     padding: 15px 55px;
     background: gold;
-    color: rgb(0, 0, 0);
+    color:rgb(0, 0, 0);
     font-size: 18px;
+    translation: all 0.5s;
 }
-
-a:hover {
-    color: rgb(0, 0, 0) !important;
-}
-
-.btn:hover {
+.btn:hover{
     border-radius: 16px;
 }
