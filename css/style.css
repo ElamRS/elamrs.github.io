@@ -599,3 +599,20 @@ a:hover {
 #contato placeholder {
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+/* CSS da página "Obrigado" */
+
+.btn {
+    padding: 15px 55px;
+    background: gold;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+a:hover {
+    color: gold !important;
+}
+
+.btn:hover {
+    border-radius: 16px;
+}
