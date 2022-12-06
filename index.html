@@ -781,28 +781,30 @@
         
             <!--Div da aba de Contatos-->
             <div class="aba" id="contato" hidden>
-              <section class="content">
-              <div class="conteudo">
-                    <div class="texto">
-                    <h3>Formulário de Contato</h3>
-                    <p>Caso deseje, nos envie suas dúvidas, comentários, sugestões ou simplesmente entre em contato! Ficaremos felizes em receber sua mensagem!<br><br>Email:<a href="mailto:interativeastromap@gmail.com" target="_blank"> interativeastromap@gmail.com</a></p> 
-                    </div>
-                  
-                    <div class="formulario">
-                       <form class="form" method="POST" action="./email.php">
-                       <p>Como deseja ser chamado?</p>
-                       <input class="field" name="name" placeholder="Nome"><br><br>
-                       <p>Nos diga seu e-mail:</p>
-                       <input class="field" name="email" placeholder="E-mail"><br><br>
-                       <p>Deixe sua mensagem:</p>
-                       <textarea class="field" name="message" placeholder="Digite sua mensagem aqui."></textarea>
-                       <input id="contato_enviar" type="submit" value="Enviar">
-                       </form>
-              </div>
-              </section>
-            </div>    
-                
-            </div>
+                <section class="content">
+                <div class="conteudo">
+                      <div class="texto">
+                      <h3>Formulário de Contato</h3>
+                      <p>Caso deseje, nos envie suas dúvidas, comentários, sugestões ou simplesmente entre em contato! Ficaremos felizes em receber sua mensagem!<br><br>Email:<a href="mailto:interativeastromap@gmail.com" target="_blank"> interativeastromap@gmail.com</a></p> 
+                      </div>
+                    
+                      <div class="formulario">
+                         <form class="form" method="post" action="https://api.staticforms.xyz/submit">
+                         <p>Como deseja ser chamado?</p>
+                         <input class="field" name="name" placeholder="Nome" autocomplete="off" required><br><br>
+                         <p>Nos diga seu e-mail:</p>
+                         <input class="field" name="email" placeholder="E-mail" autocomplete="off" required><br><br>
+                         <p>Deixe sua mensagem:</p>
+                         <textarea class="field" name="message" placeholder="Digite sua mensagem aqui." autocomplete="off" required></textarea>
+                         <input id="contato_enviar" type="submit" value="Enviar">
+  
+                         <input type="hidden" name="accessKey" value="9a22092c-b1bf-4479-8b70-f0a6d1b4c95d">
+                         <input type="hidden" name="redirectTo" value="https://elamrs.github.io/obrigado.html">
+                         </form>
+                </div>
+                </section>
+            </div> 
+  
 
         </div>
     </body>
