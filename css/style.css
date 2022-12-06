@@ -602,6 +602,26 @@ a:hover {
 
 /* CSS da página "Obrigado" */
 
+.text {
+    font-size: 45px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.paragrafo {
+    color: white;
+    margin-bottom: 50px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: black;
+    flex-direction: column;
+}
+
 .btn {
     padding: 15px 55px;
     background: gold;
@@ -610,7 +630,7 @@ a:hover {
 }
 
 a:hover {
-    color: gold !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 .btn:hover {
